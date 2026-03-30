@@ -4,9 +4,9 @@
 
 .services-four-banner {
   position: relative;
-  min-height: clamp(520px, 54vw, 760px);
+  min-height: clamp(540px, 56vw, 760px);
   overflow: hidden;
-  background: #0f1620;
+  background: #080808;
 }
 
 .services-four-banner__media,
@@ -21,63 +21,79 @@
 .services-four-banner__media img {
   object-fit: cover;
   object-position: center;
-  filter: grayscale(1) brightness(0.42) saturate(0.7);
+  filter: grayscale(0.35) brightness(0.42) saturate(0.72) contrast(1.04);
   transform: scale(1.03);
 }
 
 .services-four-banner__overlay {
   display: flex;
   align-items: flex-end;
+  padding: clamp(0.8rem, 2vw, 1.25rem);
   background:
-    linear-gradient(180deg, rgba(12, 12, 12, 0.1) 0%, rgba(12, 12, 12, 0.58) 100%),
-    linear-gradient(90deg, rgba(14, 14, 14, 0.42) 0%, rgba(14, 14, 14, 0.16) 45%, rgba(14, 14, 14, 0.38) 100%);
+    linear-gradient(180deg, rgba(8, 8, 8, 0.08) 0%, rgba(8, 8, 8, 0.44) 58%, rgba(8, 8, 8, 0.68) 100%),
+    linear-gradient(90deg, rgba(12, 12, 12, 0.48) 0%, rgba(12, 12, 12, 0.12) 42%, rgba(12, 12, 12, 0.4) 100%);
 }
 
 .services-four-banner__inner {
-  width: min(100%, 1380px);
-  margin: 0 auto;
-  padding: 0 1rem 0;
+  width: 100%;
+  margin: 0;
 }
 
 .services-four-banner__panel {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.95rem;
-  width: min(100%, 930px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  width: min(100%, 980px);
   margin-left: auto;
-  padding: clamp(1.2rem, 2vw, 1.65rem) clamp(1.4rem, 2.8vw, 2.9rem) clamp(1.2rem, 2vw, 1.65rem) clamp(10rem, 16vw, 13rem);
+  padding: clamp(1.8rem, 3vw, 2.45rem) clamp(1.5rem, 3vw, 2.4rem) clamp(1.3rem, 2.4vw, 1.75rem)
+    clamp(6rem, 9vw, 9.5rem);
   color: #fff;
-  background: linear-gradient(135deg, rgba(170, 170, 170, 0.78), rgba(126, 126, 126, 0.58));
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 16% 66%);
-  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.24);
+  background: linear-gradient(135deg, rgba(202, 202, 202, 0.9), rgba(150, 150, 150, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  clip-path: polygon(5.75rem 0, 100% 0, 100% 100%, 0 100%, 0 2.8rem);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.3);
+}
+
+.services-four-banner__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 82% 58%, rgba(255, 255, 255, 0.12), transparent 22%);
+  pointer-events: none;
 }
 
 .services-four-banner__copy {
-  width: min(100%, 540px);
-  text-align: right;
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  text-align: left;
 }
 
 .services-four-banner__copy h1 {
   margin: 0;
-  font-size: clamp(1.8rem, 2.45vw, 2.85rem);
+  font-size: clamp(1.95rem, 2.65vw, 3rem);
   line-height: 1.12;
   font-weight: 700;
   letter-spacing: -0.03em;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
 }
 
 .services-four-banner__cta {
   flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 220px;
-  padding: 1rem 1.6rem;
-  border-radius: 12px;
+  min-width: 300px;
+  padding: 1.15rem 2rem;
+  border-radius: 14px;
   background: #ff6508;
   color: #fff;
   text-decoration: none;
@@ -757,10 +773,10 @@
 
 @media (max-width: 900px) {
   .services-four-banner__panel {
-    clip-path: none;
     align-items: flex-start;
     width: 100%;
-    padding-left: 1.5rem;
+    padding: 1.9rem 1.25rem 1.4rem 4.25rem;
+    clip-path: polygon(4.25rem 0, 100% 0, 100% 100%, 0 100%, 0 2.2rem);
   }
 
   .services-four-banner__cta {
@@ -768,7 +784,6 @@
   }
 
   .services-four-banner__copy {
-    text-align: left;
     width: 100%;
   }
 
@@ -816,11 +831,12 @@
   }
 
   .services-four-banner__inner {
-    padding: 0 1rem 1rem;
+    padding: 0;
   }
 
   .services-four-banner__panel {
-    padding: 1.25rem;
+    padding: 1.45rem 1rem 1.1rem 2.2rem;
+    clip-path: polygon(2.3rem 0, 100% 0, 100% 100%, 0 100%, 0 1.45rem);
   }
 
   .services-four-banner__copy h1 {

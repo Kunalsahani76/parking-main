@@ -1,4 +1,4 @@
-import bannerImage from '../../assets/images/carinbuilding.jpg'
+import bannerImage from '../../assets/images/traffic.jpg'
 import parkingDesignImage from '../../assets/images/parkingdesign.jpg'
 import supportImage from '../../assets/images/HB1.jpg'
 import roadImage from '../../assets/images/carinroad.jpg'

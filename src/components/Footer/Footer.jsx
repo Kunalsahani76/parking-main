@@ -40,8 +40,8 @@ const contactItems = [
     ),
   },
   {
-    text: '+1 (555) 123-4567',
-    href: 'tel:+91+1 (555) 123-4567',
+    text: '+91-9811207119',
+    href: 'tel:+91+91-9811207119',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -56,8 +56,8 @@ const contactItems = [
     ),
   },
   {
-    text: 'hello@parkingadvisor.com',
-    href: 'mailto:hello@parkingadvisor.com',
+    text: 'principal@parkingadvisor.com',
+    href: 'mailto:principal@parkingadvisor.com',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path

@@ -1,4 +1,4 @@
-import bannerImage from '../../assets/images/banner.jpg'
+import bannerImage from '../../assets/images/parkingRevenue.png'
 import benefitsImage from '../../assets/images/parkingdesign.jpg'
 import supportImage from '../../assets/images/HB1.jpg'
 import './ServicesSix.css'
@@ -294,7 +294,7 @@ function ServicesSix() {
           <div className="services-six-banner__inner">
             <div className="services-six-banner__panel">
               <div className="services-six-banner__copy">
-                <span className="services-six-banner__eyebrow">Services 6</span>
+                <span className="services-six-banner__eyebrow"></span>
                 <h1>Parking Revenue &amp; Efficiency Enhancement</h1>
               </div>
 

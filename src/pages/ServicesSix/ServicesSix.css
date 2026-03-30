@@ -4,9 +4,9 @@
 
 .services-six-banner {
   position: relative;
-  min-height: clamp(520px, 54vw, 760px);
+  min-height: clamp(540px, 56vw, 760px);
   overflow: hidden;
-  background: #09111c;
+  background: #080808;
 }
 
 .services-six-banner__media,
@@ -21,41 +21,58 @@
 .services-six-banner__media img {
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.34) saturate(0.78) contrast(1.06);
+  filter: brightness(0.42) saturate(0.72) contrast(1.06);
   transform: scale(1.03);
 }
 
 .services-six-banner__overlay {
   display: flex;
   align-items: flex-end;
+  padding: clamp(0.8rem, 2vw, 1.25rem);
   background:
-    linear-gradient(180deg, rgba(5, 10, 18, 0.12) 0%, rgba(5, 10, 18, 0.5) 100%),
-    linear-gradient(90deg, rgba(4, 8, 16, 0.5) 0%, rgba(4, 8, 16, 0.1) 42%, rgba(4, 8, 16, 0.44) 100%);
+    linear-gradient(180deg, rgba(8, 8, 8, 0.08) 0%, rgba(8, 8, 8, 0.42) 58%, rgba(8, 8, 8, 0.68) 100%),
+    linear-gradient(90deg, rgba(10, 10, 10, 0.48) 0%, rgba(10, 10, 10, 0.12) 42%, rgba(10, 10, 10, 0.42) 100%);
 }
 
 .services-six-banner__inner {
-  width: min(100%, 1380px);
-  margin: 0 auto;
-  padding: 0 1.5rem 1.8rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .services-six-banner__panel {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: clamp(1.8rem, 3vw, 2.6rem) clamp(1.6rem, 3vw, 2.8rem);
+  gap: 1.5rem 2rem;
+  width: min(100%, 1040px);
+  margin-left: auto;
+  padding: clamp(1.8rem, 3vw, 2.45rem) clamp(1.5rem, 3vw, 2.4rem) clamp(1.3rem, 2.4vw, 1.75rem)
+    clamp(6rem, 9vw, 10rem);
   color: #fff;
-  background: linear-gradient(135deg, rgba(152, 152, 152, 0.72), rgba(103, 103, 103, 0.54));
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  background: linear-gradient(135deg, rgba(202, 202, 202, 0.9), rgba(150, 150, 150, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  clip-path: polygon(5.75rem 0, 100% 0, 100% 100%, 0 100%, 0 2.8rem);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.3);
+}
+
+.services-six-banner__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 58%, rgba(255, 255, 255, 0.13), transparent 22%);
+  pointer-events: none;
 }
 
 .services-six-banner__copy {
-  max-width: 760px;
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
 }
 
 .services-six-banner__eyebrow {
@@ -70,19 +87,22 @@
 
 .services-six-banner__copy h1 {
   margin: 0;
-  font-size: clamp(2rem, 3.3vw, 4rem);
-  line-height: 1.06;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 1.08;
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
+  text-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
 }
 
 .services-six-banner__cta {
   flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 340px;
-  padding: 1.2rem 2rem;
+  min-width: 300px;
+  padding: 1.15rem 2rem;
   border-radius: 14px;
   background: #ff6508;
   color: #fff;
@@ -669,9 +689,11 @@
 
 @media (max-width: 900px) {
   .services-six-banner__panel {
-    clip-path: none;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    padding: 1.9rem 1.25rem 1.4rem 4.25rem;
+    clip-path: polygon(4.25rem 0, 100% 0, 100% 100%, 0 100%, 0 2.2rem);
   }
 
   .services-six-banner__cta {
@@ -721,11 +743,12 @@
   }
 
   .services-six-banner__inner {
-    padding: 0 1rem 1rem;
+    padding: 0;
   }
 
   .services-six-banner__panel {
-    padding: 1.25rem;
+    padding: 1.45rem 1rem 1.1rem 2.2rem;
+    clip-path: polygon(2.3rem 0, 100% 0, 100% 100%, 0 100%, 0 1.45rem);
   }
 
   .services-six-intro {

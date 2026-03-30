@@ -1,25 +1,25 @@
 import serviceBanner from '../../assets/images/servicebanner.jpg'
 import anprPreviewImage from '../../assets/images/car3.jpg'
-import smartParkingBanner from '../../assets/images/parkinglobby.jpg'
+import smartParkingBanner from '../../assets/images/smart.jpg'
 import parkingDesignImage from '../../assets/images/parkingdesign.jpg'
 import sectionBackground from '../../assets/images/Our Expertise.png'
 import supportImage from '../../assets/images/HB1.jpg'
-import multiImage from '../../assets/images/multi.jpg'
 import layoutRedesignImage from '../../assets/images/lobby.jpg'
-import parkingLobbyImage from '../../assets/images/parkinglobby.jpg'
-import nagarImage from '../../assets/images/nagar.png'
-import carInRoadImage from '../../assets/images/carinroad.jpg'
-import carInBuildingImage from '../../assets/images/carinbuilding.jpg'
-import ourStoryImage from '../../assets/images/ourstory.png'
+import residentialSocietiesImage from '../../assets/images/Residential societies.jpg'
+import mallsImage from '../../assets/images/malls.jpg'
+import hospitalsImage from '../../assets/images/hospitals.jpg'
+import itParksImage from '../../assets/images/IT parks.jpg'
+import airportsImage from '../../assets/images/airports.jpg'
+import railwayStationsImage from '../../assets/images/railway stations.jpg'
 import './Services.css'
 
 const applicationItems = [
-  { title: 'RESIDENTIAL SOCIETIES', image: multiImage },
-  { title: 'MALLS', image: parkingLobbyImage },
-  { title: 'HOSPITALS', image: nagarImage },
-  { title: 'IT PARKS', image: carInRoadImage },
-  { title: 'AIRPORTS', image: carInBuildingImage },
-  { title: 'RAILWAY STATIONS', image: ourStoryImage },
+  { title: 'RESIDENTIAL SOCIETIES', image: residentialSocietiesImage },
+  { title: 'MALLS', image: mallsImage },
+  { title: 'HOSPITALS', image: hospitalsImage },
+  { title: 'IT PARKS', image: itParksImage },
+  { title: 'AIRPORTS', image: airportsImage },
+  { title: 'RAILWAY STATIONS', image: railwayStationsImage },
 ]
 
 const processSteps = [
@@ -359,9 +359,7 @@ function Services() {
             <div className="services-hero__panel">
               {isServicesThree ? (
                 <div className="services-hero__copy">
-                  <p>Services 3</p>
                   <h1>SMART &amp; AUTOMATED PARKING</h1>
-                  <span>Traffic Flow &amp; Circulation Planning</span>
                 </div>
               ) : (
                 <p>Parking Structure Design &amp; Consulting Services</p>
