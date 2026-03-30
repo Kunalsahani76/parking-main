@@ -82,6 +82,7 @@ function Header() {
         <button
           type="button"
           className="site-header__menu-button"
+          aria-label={isNavOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isNavOpen}
           aria-controls="site-header-navigation"
           onClick={() => {
@@ -89,10 +90,11 @@ function Header() {
             setIsServicesOpen(false)
           }}
         >
-          <span />
-          <span />
-          <span />
-          <span className="site-header__menu-label">Menu</span>
+          <span className="site-header__menu-icon" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
         </button>
 
         <nav

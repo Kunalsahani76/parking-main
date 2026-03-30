@@ -1341,6 +1341,32 @@
     padding: 1.4rem;
   }
 
+  .intro-section__card h2 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .intro-section__accent {
+    width: 54px;
+    height: 6px;
+    margin-top: 0.55rem;
+  }
+
+  .intro-section__card h3 {
+    max-width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .intro-section__card p {
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
   .intro-section__cta {
     min-width: 0;
     width: 100%;

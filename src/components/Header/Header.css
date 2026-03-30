@@ -1,7 +1,10 @@
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   border-bottom: 1px solid #d9d9d9;
   background: #fff;
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.06);
 }
 
 .site-header__inner {
@@ -26,25 +29,56 @@
   display: none;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  padding: 0.8rem 0.95rem;
-  border: 1px solid #111;
+  width: 48px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(35, 63, 103, 0.28);
+  border-radius: 8px;
   background: #fff;
-  color: #111;
+  color: #233f67;
   cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.site-header__menu-button span:not(.site-header__menu-label) {
-  display: block;
+.site-header__menu-button:hover,
+.site-header__menu-button:focus-visible {
+  border-color: #ff6a00;
+  box-shadow: 0 8px 20px rgba(35, 63, 103, 0.12);
+}
+
+.site-header__menu-icon {
+  position: relative;
+  display: flex;
   width: 18px;
-  height: 2px;
-  background: currentColor;
+  height: 14px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.site-header__menu-label {
-  margin-left: 0.35rem;
-  font-size: 0.95rem;
-  font-weight: 500;
+.site-header__menu-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.site-header__menu-button[aria-expanded='true'] .site-header__menu-icon span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.site-header__menu-button[aria-expanded='true'] .site-header__menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header__menu-button[aria-expanded='true'] .site-header__menu-icon span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .site-header__nav {
@@ -348,22 +382,12 @@
   }
 
   .site-header__brand img {
-    width: 88px;
+    width: 92px;
   }
 
   .site-header__menu-button {
-    min-width: 112px;
-    gap: 0.28rem;
-    padding: 0.58rem 0.7rem;
-  }
-
-  .site-header__menu-label {
-    margin-left: 0.2rem;
-    font-size: 0.78rem;
-  }
-
-  .site-header__menu-button span:not(.site-header__menu-label) {
-    width: 14px;
+    width: 40px;
+    height: 36px;
   }
 
   .site-header__nav {
