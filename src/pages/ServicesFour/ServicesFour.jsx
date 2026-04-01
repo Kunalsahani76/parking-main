@@ -264,7 +264,11 @@ function ServicesFour() {
           <div className="services-four-banner__inner">
             <div className="services-four-banner__panel">
               <div className="services-four-banner__copy">
-                <h1>Government & Compliance Advisory Approval Ready PlanningZero Delays</h1>
+                <h1>
+                  <span>Government &amp; Compliance Advisory</span>
+                  <span>Approval Ready Planning</span>
+                  <span>Zero Delays</span>
+                </h1>
               </div>
 
               <a className="services-four-banner__cta" href="/contact">

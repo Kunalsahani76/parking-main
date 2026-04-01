@@ -84,6 +84,10 @@
   text-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
 }
 
+.services-four-banner__copy h1 span {
+  display: block;
+}
+
 .services-four-banner__cta {
   flex: 0 0 auto;
   position: relative;
@@ -773,6 +777,7 @@
 
 @media (max-width: 900px) {
   .services-four-banner__panel {
+    flex-direction: column;
     align-items: flex-start;
     width: 100%;
     padding: 1.9rem 1.25rem 1.4rem 4.25rem;
@@ -830,17 +835,31 @@
     min-height: 460px;
   }
 
+  .services-four-banner__overlay {
+    padding: 0.75rem;
+  }
+
   .services-four-banner__inner {
     padding: 0;
   }
 
   .services-four-banner__panel {
-    padding: 1.45rem 1rem 1.1rem 2.2rem;
+    gap: 1rem;
+    padding: 1.3rem 0.9rem 1rem 1.35rem;
     clip-path: polygon(2.3rem 0, 100% 0, 100% 100%, 0 100%, 0 1.45rem);
   }
 
   .services-four-banner__copy h1 {
-    font-size: 1.7rem;
+    font-size: clamp(1.35rem, 7vw, 1.7rem);
+    line-height: 1.08;
+  }
+
+  .services-four-banner__cta {
+    width: 100%;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+    text-align: center;
   }
 
   .services-four-intro {

@@ -73,10 +73,10 @@ const successStoryLogos = [
 
 const successStoryMarquee = [...successStoryLogos, ...successStoryLogos]
 const introCarouselImages = [
-  { image: carouselOneImage, alt: 'Parking area aerial view 1' },
-  { image: carouselTwoImage, alt: 'Parking area aerial view 2' },
-  { image: carouselThreeImage, alt: 'Parking area aerial view 3' },
-  { image: carouselFourImage, alt: 'Parking area aerial view 4' },
+  { image: carouselOneImage, alt: 'Best Parking Management | The Parking Advisor' },
+  { image: carouselTwoImage, alt: 'Best Parking Management | The Parking Advisor' },
+  { image: carouselThreeImage, alt: 'Best Parking Management | The Parking Advisor' },
+  { image: carouselFourImage, alt: 'Best Parking Management | The Parking Advisor' },
 ]
 
 function Home() {
@@ -90,6 +90,63 @@ function Home() {
     }, 3500)
 
     return () => window.clearInterval(timerId)
+  }, [])
+
+  useEffect(() => {
+    const previousTitle = document.title
+    const existingDescription = document.querySelector('meta[name="description"]')
+    const previousDescription = existingDescription?.getAttribute('content')
+    const existingCanonical = document.querySelector('link[rel="canonical"]')
+    const previousCanonicalHref = existingCanonical?.getAttribute('href')
+
+    document.title = 'Best Parking Consultant in India | The Parking Advisor'
+
+    let metaDescription = existingDescription
+    let createdDescription = false
+
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta')
+      metaDescription.setAttribute('name', 'description')
+      document.head.appendChild(metaDescription)
+      createdDescription = true
+    }
+
+    metaDescription.setAttribute(
+      'content',
+      'The Parking Advisor is a leading parking consultant in India offering smart parking solutions for builders, commercial spaces, and government projects. Transform unorganized parking into efficient, scalable systems.',
+    )
+
+    let canonicalLink = existingCanonical
+    let createdCanonical = false
+
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link')
+      canonicalLink.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonicalLink)
+      createdCanonical = true
+    }
+
+    const canonicalOrigin = window.location.origin === 'null'
+      ? 'https://www.theparkingadvisor.com'
+      : window.location.origin
+
+    canonicalLink.setAttribute('href', `${canonicalOrigin}/`)
+
+    return () => {
+      document.title = previousTitle
+
+      if (metaDescription && previousDescription) {
+        metaDescription.setAttribute('content', previousDescription)
+      } else if (metaDescription && createdDescription) {
+        metaDescription.remove()
+      }
+
+      if (canonicalLink && previousCanonicalHref) {
+        canonicalLink.setAttribute('href', previousCanonicalHref)
+      } else if (canonicalLink && createdCanonical) {
+        canonicalLink.remove()
+      }
+    }
   }, [])
 
   return (
@@ -204,7 +261,7 @@ function Home() {
 
       <section className="services-gallery">
         <article className="services-gallery__feature">
-          <img src={hbOneImage} alt="Traffic planning and design workspace" />
+          <img src={hbOneImage} alt="Traffic Planning and Design Consultancy" />
           <div className="services-gallery__feature-overlay">
             <h2>TRAFFIC PLANNING &amp; DESIGN</h2>
             <ul>
@@ -221,7 +278,7 @@ function Home() {
 
       <section className="traffic-flow-section">
         <article className="traffic-flow-section__feature">
-          <img src={mapImage} alt="Traffic flow and circulation map" />
+          <img src={mapImage} alt="Traffic Flow and Circulation Service" />
           <div className="traffic-flow-section__overlay">
             <h2>TRAFFIC FLOW &amp; CIRCULATION</h2>
             <ul>
@@ -237,7 +294,7 @@ function Home() {
 
       <section className="parking-lobby-section">
         <article className="parking-lobby-section__feature">
-          <img src={parkingLobbyImage} alt="Parking lobby and arrival zone" />
+          <img src={parkingLobbyImage} alt="Parking lobby and arrival management services" />
           <div className="parking-lobby-section__overlay">
             <h2>PARKING LOBBY &amp; ARRIVAL EXPERIENCE</h2>
             <ul>
@@ -269,7 +326,7 @@ function Home() {
 
       <section className="compliance-advisory-section">
         <article className="compliance-advisory-section__feature">
-          <img src={carInRoadImage} alt="Parking compliance monitoring and advisory" />
+          <img src={carInRoadImage} alt="Parking compliance monitoring and advisory services" />
           <div className="compliance-advisory-section__overlay">
             <h2>GOVERNMENT &amp; COMPLIANCE ADVISORY</h2>
             <ul>
