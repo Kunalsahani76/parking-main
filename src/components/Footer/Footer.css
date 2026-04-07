@@ -237,6 +237,7 @@
 
 .site-footer__list a,
 .site-footer__contact-list a,
+.site-footer__contact-list li > span,
 .site-footer__bottom p,
 .site-footer__legal a {
   color: #39537b;
@@ -257,7 +258,8 @@
   color: #173964;
 }
 
-.site-footer__contact-list a {
+.site-footer__contact-list a,
+.site-footer__contact-list li > span {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.55rem;

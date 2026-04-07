@@ -23,8 +23,25 @@ const serviceLinks = [
 
 const contactItems = [
   {
-    text: '123 Innovation Drive, Tech City, TC 90210',
-    href: 'https://maps.google.com/?q=123+Innovation+Drive,+Tech+City,+TC+90210',
+    text: 'Noida Uttar Pradesh, India',
+    href: 'https://maps.app.goo.gl/s78HoJXxCJhykgV49',
+    icon: (
+      <svg viewBox="0 0 24 24" role="presentation">
+        <path
+          d="M12 21s6-4.8 6-11a6 6 0 1 0-12 0c0 6.2 6 11 6 11Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
+  {
+    text: 'Place of Business - Agra Aligar Road,Hathras, Uttar Pradesh, India',
+    href: 'https://maps.app.goo.gl/9xidV1rtUMjpc7ETA',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -74,6 +91,31 @@ const contactItems = [
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    text: 'GST: 09AQVPK4425A1ZS',
+    href: null,
+    icon: (
+      <svg viewBox="0 0 24 24" role="presentation">
+        <rect
+          x="4"
+          y="3"
+          width="16"
+          height="18"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <path
+          d="M8 8h8M8 12h8M8 16h5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
         />
       </svg>
     ),
@@ -271,12 +313,21 @@ function Footer() {
               <ul className="site-footer__contact-list">
                 {contactItems.map((item) => (
                   <li key={item.text}>
-                    <a href={item.href} target="_blank" rel="noreferrer">
-                      <span className="site-footer__contact-icon" aria-hidden="true">
-                        {item.icon}
+                    {item.href ? (
+                      <a href={item.href} target="_blank" rel="noreferrer">
+                        <span className="site-footer__contact-icon" aria-hidden="true">
+                          {item.icon}
+                        </span>
+                        <span>{item.text}</span>
+                      </a>
+                    ) : (
+                      <span>
+                        <span className="site-footer__contact-icon" aria-hidden="true">
+                          {item.icon}
+                        </span>
+                        <span>{item.text}</span>
                       </span>
-                      <span>{item.text}</span>
-                    </a>
+                    )}
                   </li>
                 ))}
               </ul>
