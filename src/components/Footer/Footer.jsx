@@ -23,8 +23,8 @@ const serviceLinks = [
 
 const contactItems = [
   {
-    text: 'Noida Uttar Pradesh, India',
-    href: 'https://maps.app.goo.gl/s78HoJXxCJhykgV49',
+    text: 'Corp. Office - Unit 301 Ithum Tower A sector 62 Noida',
+    href: 'https://maps.app.goo.gl/FMXc2oACiYZU9htG9',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -40,8 +40,8 @@ const contactItems = [
     ),
   },
   {
-    text: 'Place of Business - Agra Aligar Road,Hathras, Uttar Pradesh, India',
-    href: 'https://maps.app.goo.gl/9xidV1rtUMjpc7ETA',
+    text: 'Regd. Office - Agra Aligar Road, Hathras, Uttar Pradesh, India',
+    href: 'https://maps.app.goo.gl/6eYsXMUxaWT8M3Hh8',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
