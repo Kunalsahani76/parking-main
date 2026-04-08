@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import contactBanner from '../../assets/images/contactbanner.png'
 import lobbyImage from '../../assets/images/lobby.jpg'
 import './Contact.css'
@@ -64,7 +65,43 @@ const contactCards = [
   },
 ]
 
+const initialFormData = {
+  fullName: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: '',
+}
+
 function Contact() {
+  const [formData, setFormData] = useState(initialFormData)
+
+  function handleChange(event) {
+    const { name, value } = event.target
+
+    setFormData((currentData) => ({
+      ...currentData,
+      [name]: value,
+    }))
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault()
+
+    const whatsappMessage = [
+      'Hello The Parking Advisor,',
+      '',
+      `Full Name: ${formData.fullName}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Subject: ${formData.subject}`,
+      `Message: ${formData.message}`,
+    ].join('\n')
+
+    const whatsappUrl = `https://wa.me/919811207119?text=${encodeURIComponent(whatsappMessage)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section className="contact-page">
       <div className="contact-hero">
@@ -111,30 +148,65 @@ function Contact() {
           <div className="contact-message__panel">
             <h2>Send us a message</h2>
 
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
               <label className="contact-form__field">
                 <span>Full Name</span>
-                <input type="text" placeholder="John Doe" />
+                <input
+                  name="fullName"
+                  type="text"
+                  placeholder="John Doe"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <label className="contact-form__field">
                 <span>Email</span>
-                <input type="email" placeholder="john@company.com" />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="john@company.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <label className="contact-form__field">
                 <span>Phone</span>
-                <input type="tel" placeholder="+91 000 000 0000" />
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder="+91 000 000 0000"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <label className="contact-form__field">
                 <span>Subject</span>
-                <input type="text" placeholder="Consulting Inquiry" />
+                <input
+                  name="subject"
+                  type="text"
+                  placeholder="Consulting Inquiry"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <label className="contact-form__field contact-form__field--full">
                 <span>Message</span>
-                <textarea rows="6" placeholder="Tell us about your project..." />
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us about your project..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <button className="contact-form__submit" type="submit">

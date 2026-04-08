@@ -331,6 +331,65 @@ const faqItems = [
   },
 ]
 
+const parkingPlanningItems = [
+  {
+    title: 'SITE FEASIBILITY & ANALYSIS',
+    icon: (
+      <svg viewBox="0 0 64 64" role="presentation">
+        <circle cx="32" cy="32" r="7" />
+        <circle cx="32" cy="15" r="5" />
+        <circle cx="49" cy="24" r="5" />
+        <circle cx="49" cy="49" r="5" />
+        <circle cx="15" cy="24" r="5" />
+        <circle cx="15" cy="49" r="5" />
+        <path d="M32 20v7M38 28l6-3M38 36l6 8M26 28l-6-3M26 36l-6 8" />
+      </svg>
+    ),
+  },
+  {
+    title: 'PARKING LAYOUT DESIGN (2D/3D)',
+    icon: (
+      <svg viewBox="0 0 64 64" role="presentation">
+        <rect x="22" y="12" width="20" height="14" rx="2" />
+        <path d="M29 17h6M18 36l4-10h20l4 10v10h-4v-5H22v5h-4Z" />
+        <circle cx="24" cy="40" r="2.5" fill="currentColor" stroke="none" />
+        <circle cx="40" cy="40" r="2.5" fill="currentColor" stroke="none" />
+        <path d="M46 18h8v28M50 18v-6M50 46h-8" />
+      </svg>
+    ),
+  },
+  {
+    title: 'BASEMENT & SURFACE PARKING PLANNING',
+    icon: (
+      <svg viewBox="0 0 64 64" role="presentation">
+        <rect x="14" y="12" width="36" height="40" />
+        <path d="M14 24h36M14 36h36M26 24v28M38 24v28" />
+        <path d="M19 18h8M22 32l3-5 3 5M18 44h12" />
+        <path d="M30 18h14M41 42l5-5 4 4M37 46h13" />
+      </svg>
+    ),
+  },
+  {
+    title: 'ENTRY/EXIT OPTIMIZATION',
+    icon: (
+      <svg viewBox="0 0 64 64" role="presentation">
+        <path d="M22 18h12v28H22zM34 15l12 4v26l-12 4Z" />
+        <circle cx="38" cy="32" r="1.8" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    title: 'USER FLOW & SAFETY PLANNING',
+    icon: (
+      <svg viewBox="0 0 64 64" role="presentation">
+        <circle cx="32" cy="32" r="17" />
+        <path d="M32 21 42 25v8c0 7-4.2 11.8-10 14-5.8-2.2-10-7-10-14v-8Z" />
+        <path d="m27 32 4 4 7-8" />
+      </svg>
+    ),
+  },
+]
+
 function Services() {
   const isServicesThree = window.location.pathname === '/services-3'
 
@@ -371,6 +430,49 @@ function Services() {
           </div>
         </div>
       </section>
+
+      {!isServicesThree && (
+        <section className="services-parking-intro">
+          <div className="services-parking-intro__inner">
+            <p>
+              Visionary Vantage Corporation Offers Specialized Parking Planning And
+              Design Services In India, Focused On Creating Efficient, Compliant,
+              And Future-Ready Parking Systems For Residential, Commercial, And
+              Mixed-Use Developments.
+            </p>
+            <p>
+              In Today&apos;s Urban Infrastructure, Poorly Designed Parking Leads To
+              Traffic Congestion, Safety Risks, Approval Delays, And Revenue Loss.
+              Our Approach Ensures Optimized Layouts, Smooth Circulation, And
+              Compliance With National Building Code (NBC), IRC Guidelines, And
+              Local Authority Regulations.
+            </p>
+            <p>
+              We Design Parking That Works, Not Just On Drawings, But On Ground.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {!isServicesThree && (
+        <section className="services-parking-planning">
+          <div className="services-parking-planning__heading">
+            <h2>OUR EXPERTISE</h2>
+          </div>
+          <div className="services-parking-planning__inner">
+            <div className="services-parking-planning__grid">
+              {parkingPlanningItems.map((item) => (
+                <article className="services-parking-planning__item" key={item.title}>
+                  <div className="services-parking-planning__icon" aria-hidden="true">
+                    {item.icon}
+                  </div>
+                  <h2>{item.title}</h2>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {isServicesThree && (
         <section className="services-smart-intro">

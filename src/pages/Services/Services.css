@@ -199,6 +199,108 @@
   text-transform: uppercase;
 }
 
+.services-parking-intro {
+  padding: clamp(4.3rem, 7vw, 5.2rem) 1.25rem clamp(4.6rem, 7vw, 5.8rem);
+  background: linear-gradient(180deg, #fbfbfb 0%, #f6f6f6 100%);
+}
+
+.services-parking-intro__inner {
+  width: min(100%, 1260px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-parking-intro__inner p {
+  margin: 0;
+  max-width: 1206px;
+  margin-inline: auto;
+  color: #6e83a4;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.services-parking-intro__inner p + p {
+  margin-top: 24px;
+}
+
+.services-parking-planning {
+  padding: clamp(2.5rem, 5vw, 3.4rem) 1.25rem clamp(3rem, 6vw, 4.5rem);
+  background:
+    linear-gradient(rgba(245, 247, 251, 0.82), rgba(245, 247, 251, 0.82)),
+    url('../../assets/images/ourstorybackground.jpg') center center / cover no-repeat;
+}
+
+.services-parking-planning__heading {
+  margin: -2.5rem -1.25rem 2.4rem;
+  padding: 2rem 1.25rem 2.1rem;
+  background: #b9cbe4;
+  text-align: center;
+}
+
+.services-parking-planning__heading h2 {
+  margin: 0;
+  color: #18233d;
+  font-size: clamp(2.2rem, 3.5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-decoration: underline;
+  text-decoration-color: #ff6a00;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25rem;
+}
+
+.services-parking-planning__inner {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+}
+
+.services-parking-planning__grid {
+  display: grid;
+  gap: 2rem 1.4rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.services-parking-planning__item {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  text-align: center;
+}
+
+.services-parking-planning__icon {
+  display: grid;
+  width: 128px;
+  height: 128px;
+  place-items: center;
+  border-radius: 50%;
+  background: #2346f0;
+  color: #fff;
+  box-shadow: 0 18px 34px rgba(35, 70, 240, 0.18);
+}
+
+.services-parking-planning__icon svg {
+  width: 66px;
+  height: 66px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.services-parking-planning__item h2 {
+  margin: 1.35rem 0 0;
+  color: #ff6a00;
+  font-size: clamp(1.1rem, 1.55vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
 .services-smart-intro {
   padding: clamp(3.5rem, 7vw, 5rem) 1.25rem clamp(3.8rem, 8vw, 5.8rem);
   background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
@@ -1293,6 +1395,24 @@
 }
 
 @media (max-width: 900px) {
+  .services-parking-planning__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .services-parking-planning__icon {
+    width: 116px;
+    height: 116px;
+  }
+
+  .services-parking-planning__icon svg {
+    width: 58px;
+    height: 58px;
+  }
+
+  .services-parking-planning__item h2 {
+    font-size: 1rem;
+  }
+
   .services-expertise__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2.8rem 1.8rem;
@@ -1515,6 +1635,35 @@
 }
 
 @media (max-width: 640px) {
+  .services-parking-planning {
+    padding: 2.5rem 1rem 3.2rem;
+  }
+
+  .services-parking-planning__heading {
+    margin: -2.5rem -1rem 2rem;
+    padding: 1.5rem 1rem 1.65rem;
+  }
+
+  .services-parking-planning__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem 1rem;
+  }
+
+  .services-parking-planning__icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  .services-parking-planning__icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services-parking-planning__item h2 {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
   .services-expertise__top,
   .services-expertise__body {
     padding-left: 1rem;

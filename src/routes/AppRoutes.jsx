@@ -1,5 +1,6 @@
 import MainLayout from '../layout/MainLayout'
 import About from '../pages/About/About'
+import ConnectUs from '../pages/ConnectUs/ConnectUs'
 import Contact from '../pages/Contact/Contact'
 import Home from '../pages/Home/Home'
 import Services from '../pages/Services/Services'
@@ -15,6 +16,8 @@ function AppRoutes() {
   const page =
     currentPath === '/about'
       ? <About />
+      : currentPath === '/connect-us'
+        ? <ConnectUs />
       : currentPath === '/contact'
         ? <Contact />
       : currentPath === '/services'

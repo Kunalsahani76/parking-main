@@ -42,8 +42,8 @@
 
 .about-hero__content h1 {
   margin: 0;
-  max-width: 980px;
-  font-size: clamp(2.5rem, 3.85vw, 3.52rem);
+  max-width: none;
+  font-size: clamp(2.2rem, 3vw, 3.12rem);
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: -0.03em;
@@ -150,11 +150,22 @@
 }
 
 .about-story-journey {
+  position: relative;
+  isolation: isolate;
   padding: 2rem 1.5rem 4rem;
+  background: #edf1f6;
+}
+
+.about-story-journey::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background:
-    radial-gradient(circle at top left, rgba(207, 218, 232, 0.84) 0%, rgba(207, 218, 232, 0) 32%),
-    radial-gradient(circle at top right, rgba(210, 221, 235, 0.8) 0%, rgba(210, 221, 235, 0) 30%),
-    linear-gradient(140deg, rgba(232, 238, 246, 0.96) 0%, rgba(244, 247, 251, 0.98) 46%, rgba(231, 237, 245, 0.96) 100%);
+    linear-gradient(rgba(244, 247, 251, 0.72), rgba(244, 247, 251, 0.72)),
+    url('../../assets/images/ourstorybackground.jpg') center top / cover no-repeat;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .about-story-journey__inner {
@@ -586,6 +597,11 @@
     margin: 0 16px 32px;
   }
 
+  .about-hero__content h1 {
+    font-size: clamp(2.1rem, 4.6vw, 2.8rem);
+    white-space: normal;
+  }
+
   .about-details__grid {
     grid-template-columns: 1fr;
   }
@@ -613,6 +629,12 @@
 
   .about-mission__image-card {
     aspect-ratio: 385 / 261;
+  }
+}
+
+@media (min-width: 961px) {
+  .about-hero__content h1 {
+    white-space: nowrap;
   }
 }
 

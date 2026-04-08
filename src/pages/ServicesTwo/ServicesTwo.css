@@ -109,16 +109,18 @@
 }
 
 .services-two-intro__inner {
-  width: min(100%, 1460px);
+  width: min(100%, 1300px);
   margin: 0 auto;
   text-align: center;
 }
 
 .services-two-intro__inner p {
   margin: 0;
+  max-width: 1260px;
+  margin-inline: auto;
   color: #667894;
-  font-size: clamp(1.45rem, 2.35vw, 2.35rem);
-  line-height: 1.22;
+  font-size: clamp(1.25rem, 1.75vw, 1.9rem);
+  line-height: 1.18;
   letter-spacing: -0.03em;
   font-weight: 400;
 }
@@ -602,7 +604,9 @@
   }
 
   .services-two-intro__inner p {
-    font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+    max-width: 100%;
+    font-size: clamp(1.18rem, 2.4vw, 1.55rem);
+    line-height: 1.22;
   }
 
   .services-two-challenges__grid {

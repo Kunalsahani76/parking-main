@@ -178,6 +178,7 @@ function Footer() {
   const hiddenPreFooterPaths = [
     '/',
     '/about',
+    '/connect-us',
     '/success-story',
     '/contact',
     '/services-2',

@@ -169,25 +169,31 @@ function Header() {
           </a>
           <a
             className="site-header__mobile-cta"
-            href="/contact"
+            href="/connect-us"
             onClick={() => {
               setIsNavOpen(false)
               setIsServicesOpen(false)
             }}
           >
-            Contact Us
+            Connect Us
           </a>
         </nav>
 
         <a
           className="site-header__cta"
-          href="/contact"
+          href="/connect-us"
           onClick={() => {
             setIsNavOpen(false)
             setIsServicesOpen(false)
           }}
         >
-          Contact Us
+          <span className="site-header__cta-label">Connect Us</span>
+          <span className="site-header__cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="presentation">
+              <path d="M20 11.2a8 8 0 0 1-11.8 7L4 19.5l1.4-4A8 8 0 1 1 20 11.2Z" />
+              <path d="M9.2 8.8h1.4l.8 2.2-1 1a8.1 8.1 0 0 0 3.6 3.6l1-1 2.2.8v1.4a.8.8 0 0 1-.9.8A11.2 11.2 0 0 1 8.4 9.7a.8.8 0 0 1 .8-.9Z" />
+            </svg>
+          </span>
         </a>
       </div>
     </header>

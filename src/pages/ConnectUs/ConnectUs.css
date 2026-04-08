@@ -1,0 +1,148 @@
+.connect-us-page {
+  min-height: calc(100vh - 90px);
+  padding: 3rem 0 4rem;
+  background: #efefef;
+}
+
+.connect-us-card {
+  width: min(100%, 500px);
+  margin: 0 auto;
+  padding: 2rem 2rem 1.8rem;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow:
+    0 16px 26px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.connect-us-card h1 {
+  margin: 0 0 1.8rem;
+  color: #212121;
+  font-size: clamp(2rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.connect-us-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 1.15rem;
+}
+
+.connect-us-form__field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.connect-us-form__field span {
+  color: #444a57;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.connect-us-form__field input,
+.connect-us-form__field textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #f1f1f1;
+  color: #1b1b1b;
+  font: inherit;
+  resize: vertical;
+}
+
+.connect-us-form__field input::placeholder,
+.connect-us-form__field textarea::placeholder {
+  color: #7d8492;
+}
+
+.connect-us-form__field input:focus,
+.connect-us-form__field textarea:focus {
+  outline: 2px solid rgba(24, 35, 61, 0.18);
+}
+
+.connect-us-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.connect-us-form__field--full textarea {
+  min-height: 124px;
+}
+
+.connect-us-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 0.15rem;
+  padding: 0.95rem 1.2rem;
+  border: 3px solid #111;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #111;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.connect-us-form__submit:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #111;
+}
+
+.connect-us-cta {
+  margin-top: 3.2rem;
+}
+
+.connect-us-cta__inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5rem) 1.5rem;
+  background: #575656;
+  text-align: center;
+}
+
+.connect-us-cta__inner h2 {
+  margin: 0;
+  color: #ff9648;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.connect-us-cta__inner h2 span {
+  display: block;
+  color: #ffe0cf;
+}
+
+@media (max-width: 640px) {
+  .connect-us-page {
+    padding: 2rem 0 3rem;
+  }
+
+  .connect-us-card {
+    padding: 1.4rem 1.2rem 1.3rem;
+    border-radius: 20px;
+  }
+
+  .connect-us-form {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-us-cta {
+    margin-top: 2.2rem;
+  }
+
+  .connect-us-cta__inner {
+    padding: 2.5rem 1rem;
+  }
+}
