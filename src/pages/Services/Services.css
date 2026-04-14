@@ -378,14 +378,10 @@
   box-shadow: 0 22px 40px rgba(33, 68, 243, 0.14);
 }
 
-.services-smart-matters__icon svg {
+.services-smart-matters__icon img {
   width: 68px;
   height: 68px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: contain;
 }
 
 .services-smart-matters__item h3 {
@@ -451,14 +447,10 @@
   box-shadow: 0 22px 40px rgba(33, 68, 243, 0.14);
 }
 
-.services-smart-architecture__icon svg {
+.services-smart-architecture__icon img {
   width: 68px;
   height: 68px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: contain;
 }
 
 .services-smart-architecture__item h3 {
@@ -1578,7 +1570,7 @@
     height: 136px;
   }
 
-  .services-smart-matters__icon svg {
+  .services-smart-matters__icon img {
     width: 64px;
     height: 64px;
   }
@@ -1601,7 +1593,7 @@
     height: 136px;
   }
 
-  .services-smart-architecture__icon svg {
+  .services-smart-architecture__icon img {
     width: 64px;
     height: 64px;
   }
@@ -2059,7 +2051,7 @@
     height: 132px;
   }
 
-  .services-smart-matters__icon svg {
+  .services-smart-matters__icon img {
     width: 60px;
     height: 60px;
   }
@@ -2098,7 +2090,7 @@
     height: 132px;
   }
 
-  .services-smart-architecture__icon svg {
+  .services-smart-architecture__icon img {
     width: 60px;
     height: 60px;
   }

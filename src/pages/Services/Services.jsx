@@ -11,6 +11,14 @@ import hospitalsImage from '../../assets/images/hospitals.jpg'
 import itParksImage from '../../assets/images/IT parks.jpg'
 import airportsImage from '../../assets/images/airports.jpg'
 import railwayStationsImage from '../../assets/images/railway stations.jpg'
+import reducesManualErrorsIcon from '../../assets/icons/Reduces manual errors .png'
+import improvesSpeedAndEfficiencyIcon from '../../assets/icons/Improves speed and efficiency .png'
+import enhancesSecurityIcon from '../../assets/icons/Enhances security .png'
+import enablesDataDrivenDecisionsIcon from '../../assets/icons/Enables data-driven decisions.png'
+import apiLayerIcon from '../../assets/icons/API Layer.png'
+import cloudEngineIcon from '../../assets/icons/Cloud Engine.png'
+import edgeNodesIcon from '../../assets/icons/Edge Nodes.png'
+import analyticsEngineIcon from '../../assets/icons/Analytics Engine.png'
 import './Services.css'
 
 const applicationItems = [
@@ -56,84 +64,38 @@ const benefitsItems = [
 const smartParkingMattersItems = [
   {
     title: 'Reduces Manual Errors',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M22 16h14l8 8v20l-8 8H22l-8-8V24Z" />
-        <path d="M28 24h8a6 6 0 0 1 0 12h-8V24Zm0 12v4" />
-        <path d="M18 18 46 46" />
-      </svg>
-    ),
+    icon: reducesManualErrorsIcon,
   },
   {
     title: 'Improves Speed And Efficiency',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M34 10 20 34h10l-2 20 16-28H34Z" />
-      </svg>
-    ),
+    icon: improvesSpeedAndEfficiencyIcon,
   },
   {
     title: 'Enhances Security',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M32 12 48 18v13c0 11-6.8 18.2-16 21-9.2-2.8-16-10-16-21V18Z" />
-        <path d="M32 12v40" />
-      </svg>
-    ),
+    icon: enhancesSecurityIcon,
   },
   {
     title: 'Enables Data-Driven Decisions',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m14 40 10-14 8 9 11-18 7 9" />
-        <circle cx="41" cy="43" r="8" />
-        <path d="m47 49 7 7" />
-      </svg>
-    ),
+    icon: enablesDataDrivenDecisionsIcon,
   },
 ]
 
 const technicalArchitectureItems = [
   {
     title: 'API Layer',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m32 14 6 6-6 6-6-6 6-6Zm12 12 6 6-6 6-6-6 6-6ZM20 26l6 6-6 6-6-6 6-6Zm12 12 6 6-6 6-6-6 6-6Z" />
-      </svg>
-    ),
+    icon: apiLayerIcon,
   },
   {
     title: 'Cloud Engine',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M20 48h24a8 8 0 1 0-1.4-15.9A13 13 0 0 0 18 22a16 16 0 0 0 2 26" />
-        <path d="M32 16v18M32 16h10M32 16l8 10" />
-      </svg>
-    ),
+    icon: cloudEngineIcon,
   },
   {
     title: 'Edge Nodes',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <rect x="22" y="22" width="20" height="20" />
-        <rect x="28" y="28" width="8" height="8" />
-        <path d="M32 14v8M32 42v8M14 32h8M42 32h8M20 20l-4-4M44 20l4-4M20 44l-4 4M44 44l4 4" />
-      </svg>
-    ),
+    icon: edgeNodesIcon,
   },
   {
     title: 'Analytics Engine',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m16 42 10-14 9 10 13-18" />
-        <circle cx="16" cy="42" r="2.8" fill="currentColor" stroke="none" />
-        <circle cx="26" cy="28" r="2.8" fill="currentColor" stroke="none" />
-        <circle cx="35" cy="38" r="2.8" fill="currentColor" stroke="none" />
-        <circle cx="48" cy="20" r="2.8" fill="currentColor" stroke="none" />
-        <path d="M18 18h0M46 12h0" />
-        <path d="M18 18v0M46 12v0" />
-      </svg>
-    ),
+    icon: analyticsEngineIcon,
   },
 ]
 
@@ -506,7 +468,7 @@ function Services() {
                 {smartParkingMattersItems.map((item) => (
                   <article className="services-smart-matters__item" key={item.title}>
                     <div className="services-smart-matters__icon" aria-hidden="true">
-                      {item.icon}
+                      <img src={item.icon} alt="" />
                     </div>
                     <h3>{item.title}</h3>
                   </article>
@@ -532,7 +494,7 @@ function Services() {
                 {technicalArchitectureItems.map((item) => (
                   <article className="services-smart-architecture__item" key={item.title}>
                     <div className="services-smart-architecture__icon" aria-hidden="true">
-                      {item.icon}
+                      <img src={item.icon} alt="" />
                     </div>
                     <h3>{item.title}</h3>
                   </article>
