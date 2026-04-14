@@ -40,8 +40,8 @@ const contactItems = [
     ),
   },
   {
-    text: 'Regd. Office - Agra Aligar Road, Hathras, Uttar Pradesh, India',
-    href: 'https://maps.app.goo.gl/6eYsXMUxaWT8M3Hh8',
+    text: 'Regd. Office - 57, naval nagar , aligarh road, hathras  pin code 204101',
+    href: 'https://maps.app.goo.gl/qEekLrViGZFEbfdy9',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -57,8 +57,8 @@ const contactItems = [
     ),
   },
   {
-    text: '+91-9811207119',
-    href: 'tel:+91+91-9811207119',
+    text: '011-35862581',
+    href: 'tel:011-35862581',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path

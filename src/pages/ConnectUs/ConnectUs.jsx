@@ -34,7 +34,7 @@ function ConnectUs() {
       `Message: ${formData.message}`,
     ].join('\n')
 
-    const whatsappUrl = `https://wa.me/919811207119?text=${encodeURIComponent(whatsappMessage)}`
+    const whatsappUrl = `https://wa.me/91011 35862581?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 

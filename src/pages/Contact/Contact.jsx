@@ -6,8 +6,8 @@ import './Contact.css'
 const contactCards = [
   {
     title: 'Phone',
-    detail: '+91 +91-9811207119',
-    href: 'tel:+91+91-9811207119',
+    detail: '+91 +91-011 35862581',
+    href: 'tel:+91+91-011 35862581',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -98,7 +98,7 @@ function Contact() {
       `Message: ${formData.message}`,
     ].join('\n')
 
-    const whatsappUrl = `https://wa.me/919811207119?text=${encodeURIComponent(whatsappMessage)}`
+    const whatsappUrl = `https://wa.me/91011 35862581?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 

@@ -6,17 +6,19 @@ import parkingLobbyImage from '../../assets/images/Internal Circulation Design.j
 import designImage from '../../assets/images/Pedestrian-Vehicle Segregation.jpg'
 import buildingImage from '../../assets/images/Entry & Exit Engineering.jpg'
 import sectionBackground from '../../assets/images/Our Expertise.png'
+import entryExitBottlenecksIcon from '../../assets/icons/Entry:exit bottlenecks .png'
+import inefficientTurningMovementsIcon from '../../assets/icons/Inefficient turning movements .png'
+import pedestrianSafetyRisksIcon from '../../assets/icons/Pedestrian safety risks .png'
+import sweptPathAnalysisIcon from '../../assets/icons/Swept Path Analysis.png'
+import trafficVolumeAnalysisIcon from '../../assets/icons/Traffic Volume Analysis.png'
+import ircDesignParametersIcon from '../../assets/icons/IRC Design Parameters.png'
+import simulationBasedPlanningIcon from '../../assets/icons/Simulation-Based Planning.png'
 import './ServicesTwo.css'
 
 const challengeItems = [
   {
     title: 'Entry/Exit Bottlenecks',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <rect x="16" y="16" width="32" height="32" />
-        <path d="M24 40 40 24M30 24h10v10M24 30V24h6" />
-      </svg>
-    ),
+    icon: entryExitBottlenecksIcon,
   },
   {
     title: 'Vehicle Conflict Points',
@@ -29,12 +31,7 @@ const challengeItems = [
   },
   {
     title: 'Inefficient Turning Movements',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M41 46 31 36l10-10" />
-        <path d="M31 14v22h10" />
-      </svg>
-    ),
+    icon: inefficientTurningMovementsIcon,
   },
   {
     title: 'Peak-Hour Congestion',
@@ -48,15 +45,17 @@ const challengeItems = [
   },
   {
     title: 'Pedestrian Safety Risks',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M22 44h20M24 44v5l4 3M40 44v5l-4 3" />
-        <path d="M26 24h12c4 0 7 3 7 7v8H19v-8c0-4 3-7 7-7Z" />
-        <rect x="28" y="14" width="8" height="8" rx="1" />
-      </svg>
-    ),
+    icon: pedestrianSafetyRisksIcon,
   },
 ]
+
+const renderChallengeIcon = (icon) => {
+  if (typeof icon === 'string') {
+    return <img src={icon} alt="" aria-hidden="true" />
+  }
+
+  return icon
+}
 
 const scopeItems = [
   { title: 'ENTRY & EXIT ENGINEERING', image: buildingImage },
@@ -73,12 +72,7 @@ const methodologyItems = [
       'Turning radius validation',
       'Ramp maneuverability',
     ],
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <rect x="14" y="14" width="24" height="32" rx="2" />
-        <path d="M22 38V28M30 38V20M18 38v-6M14 46h24" />
-      </svg>
-    ),
+    icon: sweptPathAnalysisIcon,
   },
   {
     title: 'Traffic Volume Analysis',
@@ -87,12 +81,7 @@ const methodologyItems = [
       'Entry/exit capacity calculation',
       'Vehicle arrival rate modelling',
     ],
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M16 44V26M28 44V18M40 44V30" />
-        <path d="M12 44h36" />
-      </svg>
-    ),
+    icon: trafficVolumeAnalysisIcon,
   },
   {
     title: 'IRC Design Parameters',
@@ -101,12 +90,7 @@ const methodologyItems = [
       'Lane width: 3.0m-3.5m',
       'Aisle width: 5.5m-7.5m',
     ],
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M16 22h14M16 32h14M16 42h14" />
-        <path d="m38 18 6 6 10-10M38 38l6 6 10-10M40 28l14 14M54 28 40 42" />
-      </svg>
-    ),
+    icon: ircDesignParametersIcon,
   },
   {
     title: 'Simulation-Based Planning',
@@ -115,13 +99,7 @@ const methodologyItems = [
       'Conflict detection',
       'Flow optimization before execution',
     ],
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M32 14v8M20 22a16 16 0 1 0 24 0" />
-        <path d="M28 34a4 4 0 1 1 8 0c0 3-4 4-4 7" />
-        <path d="m40 18 6 0-3-5" />
-      </svg>
-    ),
+    icon: simulationBasedPlanningIcon,
   },
 ]
 
@@ -224,13 +202,13 @@ function ServicesTwo() {
         >
           <div className="services-two-challenges__inner">
             <div className="services-two-challenges__grid">
-              {challengeItems.map((item) => (
-                <article className="services-two-challenges__item" key={item.title}>
-                  <div className="services-two-challenges__icon" aria-hidden="true">
-                    {item.icon}
-                  </div>
-                  <h3>{item.title}</h3>
-                </article>
+                {challengeItems.map((item) => (
+                  <article className="services-two-challenges__item" key={item.title}>
+                    <div className="services-two-challenges__icon" aria-hidden="true">
+                      {renderChallengeIcon(item.icon)}
+                    </div>
+                    <h3>{item.title}</h3>
+                  </article>
               ))}
             </div>
           </div>
@@ -281,13 +259,13 @@ function ServicesTwo() {
               project on track.
             </p>
 
-            <a className="services-two-support__cta" href="tel:+91 9811207119">
+            <a className="services-two-support__cta" href="tel:011-35862581">
               <span aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M6.6 4h3.1l1.5 4.1-2 1.8a15.6 15.6 0 0 0 6 6l1.8-2L21 15.3v3.1a2 2 0 0 1-2.2 2A17.9 17.9 0 0 1 3.6 5.2 2 2 0 0 1 6.6 4Z" />
                 </svg>
               </span>
-              +91 9811207119
+              011-35862581
             </a>
           </div>
         </div>
@@ -303,7 +281,7 @@ function ServicesTwo() {
             {methodologyItems.map((item) => (
               <article className="services-two-methodology__card" key={item.title}>
                 <div className="services-two-methodology__icon" aria-hidden="true">
-                  {item.icon}
+                  {renderChallengeIcon(item.icon)}
                 </div>
                 <h3>{item.title}</h3>
                 <div className="services-two-methodology__points">

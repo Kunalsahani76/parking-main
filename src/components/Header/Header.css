@@ -8,6 +8,7 @@
 }
 
 .site-header__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,9 +105,7 @@
 }
 
 .site-header__dropdown {
-  position: relative;
-  padding-bottom: 1rem;
-  margin-bottom: -1rem;
+  position: static;
 }
 
 .site-header__dropdown-header {
@@ -144,7 +143,7 @@
 
 .site-header__dropdown-menu {
   position: absolute;
-  top: calc(100% - 0.15rem);
+  top: calc(100% + 0.1rem);
   left: 50%;
   z-index: 20;
   display: grid;
@@ -185,10 +184,11 @@
   padding: 1.35rem 1rem 1rem;
 }
 
-.site-header__service-icon svg {
-  width: min(96px, 100%);
-  height: 96px;
-  fill: #000;
+.site-header__service-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
 }
 
 .site-header__service-label {
@@ -303,6 +303,15 @@
   display: none;
 }
 
+@media (min-width: 901px) {
+  .site-header .site-header__inner {
+    width: calc(100% - 64px);
+    max-width: none;
+    margin: 0 auto;
+    padding: 0.625rem 0;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header__inner {
     flex-wrap: nowrap;
@@ -324,6 +333,10 @@
     padding: 0.65rem 0 0;
     background: transparent;
     transform: translateX(-50%);
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-header__nav.is-open {
@@ -374,6 +387,7 @@
     transform: none;
     box-shadow: none;
     border-radius: 12px;
+    overflow: visible;
   }
 
   .site-header__service-card {
@@ -397,7 +411,7 @@
     padding: 0;
   }
 
-  .site-header__service-icon svg {
+  .site-header__service-icon img {
     width: 52px;
     height: 52px;
   }
@@ -444,6 +458,7 @@
 
   .site-header__nav {
     padding-top: 0.5rem;
+    max-height: calc(100vh - 72px);
   }
 
   .site-header__nav > a,

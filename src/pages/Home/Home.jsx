@@ -20,6 +20,8 @@ import twentyTwoImage from '../../assets/images/22.png'
 import clockImage from '../../assets/images/clock.png'
 import compassImage from '../../assets/images/compass.png'
 import leafImage from '../../assets/images/leaf.png'
+import futureReadyIcon from '../../assets/icons/Future Ready Design.png'
+import revenueStrategyIcon from '../../assets/icons/Revenue Strategy.png'
 import './Home.css'
 
 const competencies = [
@@ -44,13 +46,13 @@ const competencies = [
   {
     title: 'Future Ready Designs',
     description: 'Deep industry knowledge and proven track record.',
-    icon: clockImage,
+    icon: futureReadyIcon,
     className: '',
   },
   {
     title: 'Revenue Strategy',
     description: 'Deep industry knowledge and proven track record.',
-    icon: clockImage,
+    icon: revenueStrategyIcon,
     className: '',
   },
 ]
