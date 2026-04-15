@@ -29,7 +29,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: clamp(0.8rem, 2vw, 1.25rem);
+  padding: clamp(1rem, 2vw, 1.4rem);
   background:
     linear-gradient(180deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.42) 58%, rgba(8, 8, 8, 0.66) 100%),
     linear-gradient(90deg, rgba(10, 10, 10, 0.46) 0%, rgba(10, 10, 10, 0.1) 42%, rgba(10, 10, 10, 0.42) 100%);
@@ -45,20 +45,18 @@
 
 .services-hero__panel {
   position: relative;
-  width: min(100%, 1040px);
-  padding: clamp(1.8rem, 3vw, 2.45rem) clamp(1.5rem, 3vw, 2.4rem) clamp(1.3rem, 2.4vw, 1.75rem)
-    clamp(6rem, 9vw, 10rem);
+  width: 100%;
+  padding: clamp(1.7rem, 2.8vw, 2.35rem) clamp(1.6rem, 3.2vw, 2.4rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem 2rem;
+  gap: 1.5rem 2.5rem;
   color: #fff;
-  background: linear-gradient(135deg, rgba(202, 202, 202, 0.92), rgba(154, 154, 154, 0.8));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  clip-path: polygon(5.75rem 0, 100% 0, 100% 100%, 0 100%, 0 2.8rem);
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.32);
+  background: linear-gradient(135deg, rgba(207, 207, 207, 0.44), rgba(136, 136, 136, 0.28));
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
 }
 
 .services-hero__panel::before {
@@ -66,8 +64,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 42%),
-    radial-gradient(circle at 78% 58%, rgba(255, 255, 255, 0.14), transparent 22%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 46%, rgba(255, 255, 255, 0.08) 100%),
+    radial-gradient(circle at 78% 58%, rgba(255, 255, 255, 0.12), transparent 24%);
   pointer-events: none;
 }
 
@@ -75,10 +73,10 @@
   position: relative;
   z-index: 1;
   margin: 0;
-  max-width: 520px;
-  font-size: clamp(1.85rem, 3vw, 3.1rem);
+  max-width: 620px;
+  font-size: clamp(1.85rem, 3vw, 3rem);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.04;
   letter-spacing: -0.03em;
   text-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
 }
@@ -89,12 +87,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 300px;
-  padding: 1.15rem 2rem;
+  min-width: 226px;
+  padding: 1rem 1.8rem;
   background: #ff6a00;
   border-radius: 14px;
   color: #fff;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
   font-weight: 700;
   text-decoration: none;
   transition:
@@ -118,8 +116,8 @@
 }
 
 .services-hero--smart .services-hero__overlay {
-  justify-content: center;
-  padding: clamp(0.8rem, 2vw, 1.25rem);
+  justify-content: flex-end;
+  padding: clamp(1rem, 2vw, 1.4rem);
   background:
     linear-gradient(180deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.42) 58%, rgba(8, 8, 8, 0.66) 100%),
     linear-gradient(90deg, rgba(10, 10, 10, 0.46) 0%, rgba(10, 10, 10, 0.1) 42%, rgba(10, 10, 10, 0.42) 100%);
@@ -151,18 +149,18 @@
 }
 
 .services-hero--smart .services-hero__content {
-  justify-content: center;
+  justify-content: stretch;
 }
 
 .services-hero--smart .services-hero__panel {
-  width: min(100%, 1040px);
-  margin: 0 0 0 auto;
-  padding: clamp(1.8rem, 3vw, 2.45rem) clamp(1.5rem, 3vw, 2.4rem) clamp(1.3rem, 2.4vw, 1.75rem)
-    clamp(6rem, 9vw, 10rem);
-  background: linear-gradient(135deg, rgba(202, 202, 202, 0.9), rgba(150, 150, 150, 0.78));
-  clip-path: polygon(5.75rem 0, 100% 0, 100% 100%, 0 100%, 0 2.8rem);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.7rem, 2.8vw, 2.35rem) clamp(1.6rem, 3.2vw, 2.4rem);
+  gap: 1.5rem 2.5rem;
+  background: linear-gradient(135deg, rgba(207, 207, 207, 0.44), rgba(136, 136, 136, 0.28));
+  clip-path: none;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
 }
 
 .services-hero__copy p {
@@ -183,8 +181,31 @@
   color: #fff;
   font-size: clamp(2rem, 3vw, 3.2rem);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 0.98;
   letter-spacing: -0.02em;
+}
+
+.services-hero--smart .services-hero__copy {
+  max-width: 620px;
+}
+
+.services-hero--smart .services-hero__copy h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.04;
+}
+
+.services-hero--smart .services-hero__cta {
+  min-width: 226px;
+  padding: 1rem 1.8rem;
+  border-radius: 14px;
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.services-hero--smart .services-hero__lane-mark {
+  display: none;
 }
 
 .services-hero__copy span {
@@ -1513,8 +1534,7 @@
 
   .services-hero__panel {
     width: 100%;
-    padding: 1.9rem 1.25rem 1.4rem 4.25rem;
-    clip-path: polygon(4.25rem 0, 100% 0, 100% 100%, 0 100%, 0 2.2rem);
+    padding: 1.6rem 1.25rem;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -1540,8 +1560,7 @@
   .services-hero--smart .services-hero__panel {
     width: 100%;
     margin: 0;
-    padding: 1.9rem 1.25rem 1.4rem 4.25rem;
-    clip-path: polygon(4.25rem 0, 100% 0, 100% 100%, 0 100%, 0 2.2rem);
+    padding: 1.6rem 1.25rem;
   }
 
   .services-hero--smart .services-hero__copy h1 {
@@ -1953,8 +1972,7 @@
 
   .services-hero__panel {
     width: 100%;
-    padding: 1.45rem 1rem 1.1rem 2.2rem;
-    clip-path: polygon(2.3rem 0, 100% 0, 100% 100%, 0 100%, 0 1.45rem);
+    padding: 1.3rem 1rem;
   }
 
   .services-hero__panel p {
@@ -1988,8 +2006,13 @@
 
   .services-hero--smart .services-hero__panel {
     margin: 0;
-    padding: 1.45rem 1rem 1.1rem 2.2rem;
-    clip-path: polygon(2.3rem 0, 100% 0, 100% 100%, 0 100%, 0 1.45rem);
+    width: 100%;
+    padding: 1.3rem 1rem;
+  }
+
+  .services-hero--smart .services-hero__cta {
+    min-width: 280px;
+    width: auto;
   }
 
   .services-hero__copy p {
