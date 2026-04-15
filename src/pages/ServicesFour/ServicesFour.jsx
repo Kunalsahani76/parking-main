@@ -241,9 +241,8 @@ function ServicesFour() {
             <div className="services-four-banner__panel">
               <div className="services-four-banner__copy">
                 <h1>
-                  <span>Government &amp; Compliance Advisory</span>
+                  <span>Government &amp; Compliance Advisory Approval Ready Planning | Zero Delays</span>
                 </h1>
-                <p>Approval Ready Planning | Zero Delays</p>
               </div>
 
               <a className="services-four-banner__cta" href="/contact">
@@ -257,8 +256,17 @@ function ServicesFour() {
       <section className="services-four-intro">
         <div className="services-four-intro__inner">
           <p>
-            Visionary Vantage Corporation provides specialized parking compliance and government advisory services in India, ensuring that every parking design meets National Building Code (NBC), IRC guidelines, fire safety norms, and local authority regulations.
-            In infrastructure and real estate projects, non-compliance can lead to approval rejections, costly redesigns, project delays, and financial losses. Our approach ensures that your parking systems are fully compliant, technically sound, and approval-ready from day one.
+            Visionary Vantage Corporation Provides Specialized Parking Compliance And
+            Government Advisory Services In India, Ensuring That Every Parking Design
+            Meets National Building Code (NBC), IRC Guidelines, Fire Safety Norms,
+            And Local Authority Regulations.
+          </p>
+
+          <p>
+            In Infrastructure And Real Estate Projects, Non-Compliance Can Lead To
+            Approval Rejections, Costly Redesigns, Project Delays, And Financial
+            Losses. Our Approach Ensures That Your Parking Systems Are Fully
+            Compliant, Technically Sound, And Approval-Ready From Day One.
           </p>
         </div>
       </section>

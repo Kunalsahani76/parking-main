@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { redirectToWhatsApp } from '../../utils/whatsapp'
 import './ConnectUs.css'
 
 const initialFormData = {
@@ -23,19 +24,7 @@ function ConnectUs() {
 
   function handleSubmit(event) {
     event.preventDefault()
-
-    const whatsappMessage = [
-      'Hello The Parking Advisor,',
-      '',
-      `Full Name: ${formData.fullName}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      `Subject: ${formData.subject}`,
-      `Message: ${formData.message}`,
-    ].join('\n')
-
-    const whatsappUrl = `https://wa.me/91011 35862581?text=${encodeURIComponent(whatsappMessage)}`
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    redirectToWhatsApp(formData)
   }
 
   return (
