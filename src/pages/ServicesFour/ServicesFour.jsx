@@ -1,57 +1,33 @@
 import bannerImage from '../../assets/images/government.png'
 import benefitsImage from '../../assets/images/parkingdesign.jpg'
 import supportImage from '../../assets/images/HB1.jpg'
+import governmentApprovalsIcon from '../../assets/icons/Government approvals and sanctions .png'
+import projectTimelinesIcon from '../../assets/icons/Project timelines and execution speed .png'
+import safetyAndLegalStandardsIcon from '../../assets/icons/Safety and legal standards .png'
+import riskOfPenaltiesIcon from '../../assets/icons/Risk of penalties and redesign.png'
+import overallProjectCredibilityIcon from '../../assets/icons/Overall project credibility .png'
 import './ServicesFour.css'
 
 const complianceItems = [
   {
     title: 'Government Approvals And Sanctions',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M12 24h40" />
-        <path d="M18 24v24M30 24v24M42 24v24" />
-        <path d="M10 50h44" />
-        <path d="m32 12 20 10H12Z" />
-      </svg>
-    ),
+    icon: governmentApprovalsIcon,
   },
   {
     title: 'Project Timelines And Execution Speed',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <circle cx="32" cy="32" r="18" />
-        <path d="M32 22v12l8 8" />
-      </svg>
-    ),
+    icon: projectTimelinesIcon,
   },
   {
     title: 'Safety And Legal Standards',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m18 18 28 28" />
-        <path d="M24 18 46 40" />
-        <path d="M18 46h18" />
-      </svg>
-    ),
+    icon: safetyAndLegalStandardsIcon,
   },
   {
     title: 'Risk Of Penalties And Redesign',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m32 12 20 36H12Z" />
-        <path d="M32 26v10" />
-        <circle cx="32" cy="44" r="2" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    icon: riskOfPenaltiesIcon,
   },
   {
     title: 'Overall Project Credibility',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m32 12 6 4 8-1 2 8 6 5-4 7 1 8-8 2-5 6-7-4-8 1-2-8-6-5 4-7-1-8 8-2Z" />
-        <path d="m24 32 5 5 11-11" />
-      </svg>
-    ),
+    icon: overallProjectCredibilityIcon,
   },
 ]
 
@@ -299,7 +275,7 @@ function ServicesFour() {
               {complianceItems.map((item) => (
                 <article className="services-four-matters__item" key={item.title}>
                   <div className="services-four-matters__icon" aria-hidden="true">
-                    {item.icon}
+                    <img src={item.icon} alt="" />
                   </div>
                   <h3>{item.title}</h3>
                 </article>

@@ -1,6 +1,11 @@
 import bannerImage from '../../assets/images/parkingRevenue.png'
 import benefitsImage from '../../assets/images/parkingdesign.jpg'
 import supportImage from '../../assets/images/HB1.jpg'
+import revenueStreamIcon from '../../assets/icons/Revenue Stream.png'
+import reducedCostsIcon from '../../assets/icons/Reduced Costs.png'
+import utilizationIcon from '../../assets/icons/Utilization.png'
+import leakageControlIcon from '../../assets/icons/Leakage Control.png'
+import profitabilityIcon from '../../assets/icons/Profitability.png'
 import './ServicesSix.css'
 
 const revenueMattersItems = [
@@ -8,60 +13,31 @@ const revenueMattersItems = [
     title: 'Revenue Stream',
     description:
       'Converting underutilized space into consistent, scalable income channels.',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <rect x="14" y="22" width="36" height="20" rx="2" />
-        <circle cx="32" cy="32" r="5" />
-        <path d="M20 22v20M44 22v20" />
-      </svg>
-    ),
+    icon: revenueStreamIcon,
   },
   {
     title: 'Reduced Costs',
     description:
       'Operational streamlining through automation, reducing manual overheads.',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m16 22 10 10 8-8 14 14" />
-        <path d="M42 38h10V28" />
-      </svg>
-    ),
+    icon: reducedCostsIcon,
   },
   {
     title: 'Utilization',
     description:
       'Maximizing occupancy rates through smart demand forecasting.',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M18 40a14 14 0 1 1 28 0Z" />
-        <path d="m32 40 8-12" />
-        <circle cx="32" cy="40" r="2.5" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    icon: utilizationIcon,
   },
   {
     title: 'Leakage Control',
     description:
       'Plugging financial holes with ironclad digital tracking and audits.',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M32 14 46 20v12c0 10-6 16-14 20-8-4-14-10-14-20V20Z" />
-        <path d="m25 33 5 5 10-11" />
-      </svg>
-    ),
+    icon: leakageControlIcon,
   },
   {
     title: 'Profitability',
     description:
       'Securing the long-term asset value of your physical infrastructure.',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M18 50h28" />
-        <path d="M20 26h24" />
-        <path d="M22 26v24M42 26v24" />
-        <path d="m18 22 14-8 14 8" />
-      </svg>
-    ),
+    icon: profitabilityIcon,
   },
 ]
 
@@ -342,7 +318,7 @@ function ServicesSix() {
               {revenueMattersItems.map((item) => (
                 <article className="services-six-matters__card" key={item.title}>
                   <div className="services-six-matters__icon" aria-hidden="true">
-                    {item.icon}
+                    <img src={item.icon} alt="" />
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>

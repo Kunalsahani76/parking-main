@@ -210,6 +210,12 @@
   stroke-linejoin: round;
 }
 
+.services-six-matters__icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
 .services-six-matters__card h3 {
   margin: 0.9rem 0 0;
   color: #20252c;

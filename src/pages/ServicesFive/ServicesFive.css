@@ -208,6 +208,12 @@
   stroke-linejoin: round;
 }
 
+.services-five-matters__icon img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
 .services-five-matters__item h3 {
   max-width: 220px;
   margin: 1.45rem auto 0;

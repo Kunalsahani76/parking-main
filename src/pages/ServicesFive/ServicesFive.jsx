@@ -1,50 +1,28 @@
 import bannerImage from '../../assets/images/multi.png'
 import benefitsImage from '../../assets/images/parkingdesign.jpg'
 import supportImage from '../../assets/images/HB1.jpg'
+import landUtilizationIcon from '../../assets/icons/Land Utilization.png'
+import vehicleMovementIcon from '../../assets/icons/Vehicle Movement.png'
+import safetyComplianceIcon from '../../assets/icons/Safety Compliance.png'
+import projectValueIcon from '../../assets/icons/Project Value.png'
 import './ServicesFive.css'
 
 const designMattersItems = [
   {
     title: 'Land Utilization',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <rect x="16" y="16" width="12" height="12" />
-        <rect x="36" y="16" width="12" height="12" />
-        <rect x="16" y="36" width="12" height="12" />
-        <rect x="36" y="36" width="12" height="12" />
-      </svg>
-    ),
+    icon: landUtilizationIcon,
   },
   {
     title: 'Vehicle Movement',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M32 48V18" />
-        <path d="m22 28 10-10 10 10" />
-        <path d="M32 34c0-6 3-10 9-14" />
-        <path d="m35 22 6-6 6 6" />
-        <path d="M32 34c0-6-3-10-9-14" />
-        <path d="m23 22-6-6-6 6" />
-      </svg>
-    ),
+    icon: vehicleMovementIcon,
   },
   {
     title: 'Safety Compliance',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="M32 14 46 20v12c0 10-6 16-14 20-8-4-14-10-14-20V20Z" />
-        <path d="m25 33 5 5 10-11" />
-      </svg>
-    ),
+    icon: safetyComplianceIcon,
   },
   {
     title: 'Project Value',
-    icon: (
-      <svg viewBox="0 0 64 64" role="presentation">
-        <path d="m16 40 14-14 10 10 12-12" />
-        <path d="M52 24v12H40" />
-      </svg>
-    ),
+    icon: projectValueIcon,
   },
 ]
 
@@ -361,7 +339,7 @@ function ServicesFive() {
               {designMattersItems.map((item) => (
                 <article className="services-five-matters__item" key={item.title}>
                   <div className="services-five-matters__icon" aria-hidden="true">
-                    {item.icon}
+                    <img src={item.icon} alt="" />
                   </div>
                   <h3>{item.title}</h3>
                 </article>
