@@ -7,8 +7,8 @@ import './Contact.css'
 const contactCards = [
   {
     title: 'Phone',
-    detail: '+91 +91-011 35862581',
-    href: 'tel:+91+91-011 35862581',
+    detail: '011-35862581',
+    href: 'tel:011-35862581',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -48,8 +48,8 @@ const contactCards = [
   },
   {
     title: 'Location',
-    detail: 'Infrastructure Hub, India',
-    href: 'https://maps.google.com/?q=Infrastructure+Hub+India',
+    detail: 'Unit -301, Plot no. A, 40, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309',
+    href: 'https://maps.app.goo.gl/qtkXiefXgjupiyEj7',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -73,6 +73,9 @@ const initialFormData = {
   subject: '',
   message: '',
 }
+
+const mapEmbedUrl =
+  'https://www.google.com/maps?q=Industrial%20Area,%20Sector%2062,%20Noida,%20Uttar%20Pradesh&output=embed'
 
 function Contact() {
   const [formData, setFormData] = useState(initialFormData)
@@ -213,16 +216,17 @@ function Contact() {
 
       <section className="contact-map">
         <div className="contact-map__canvas">
-          <div className="contact-map__roads" aria-hidden="true">
-            <span className="contact-map__road contact-map__road--curve-left" />
-            <span className="contact-map__road contact-map__road--curve-right" />
-            <span className="contact-map__road contact-map__road--vertical" />
-            <span className="contact-map__road contact-map__road--horizontal" />
-          </div>
+          <iframe
+            className="contact-map__iframe"
+            src={mapEmbedUrl}
+            title="Industrial Area, Sector 62, Noida, Uttar Pradesh"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
 
           <div className="contact-map__marker">
             <div className="contact-map__label">Our Location</div>
-            <span className="contact-map__dot" />
           </div>
         </div>
       </section>

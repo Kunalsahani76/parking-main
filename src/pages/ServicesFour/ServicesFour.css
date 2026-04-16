@@ -138,9 +138,15 @@
 
 .services-four-intro__inner p {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #667a99;
   font-size: clamp(1rem, 1.45vw, 1.12rem);
   line-height: 1.32;
+}
+
+.services-four-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-four-intro__inner p + p {
@@ -1010,4 +1016,9 @@
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+}
+
+.services-four-intro__inner p {
+  font-size: clamp(1.1rem, 1.85vw, 1.4rem);
+  line-height: 1.35;
 }

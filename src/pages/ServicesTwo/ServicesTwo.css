@@ -121,11 +121,17 @@
   margin: 0;
   max-width: 1260px;
   margin-inline: auto;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #667894;
   font-size: clamp(1.25rem, 1.75vw, 1.9rem);
   line-height: 1.18;
   letter-spacing: -0.03em;
   font-weight: 400;
+}
+
+.services-two-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-two-intro__inner p + p {
@@ -976,4 +982,9 @@
     font-size: 1rem;
     line-height: 1.4;
   }
+}
+
+.services-two-intro__inner p {
+  font-size: clamp(1.1rem, 1.85vw, 1.4rem);
+  line-height: 1.35;
 }

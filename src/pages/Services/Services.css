@@ -240,11 +240,17 @@
   margin: 0;
   max-width: 1206px;
   margin-inline: auto;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #6e83a4;
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0;
+}
+
+.services-parking-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-parking-intro__inner p + p {
@@ -340,11 +346,17 @@
 
 .services-smart-intro__inner p {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #667894;
   font-size: clamp(1.4rem, 2.35vw, 1.95rem);
   line-height: 1.16;
   font-weight: 400;
   letter-spacing: -0.03em;
+}
+
+.services-smart-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-smart-intro__inner p + p {
@@ -832,11 +844,17 @@
 
 .services-intro__inner p {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #667894;
   font-size: clamp(1.15rem, 2vw, 1.25rem);
   line-height: 1.25;
   font-weight: 400;
   letter-spacing: -0.02em;
+}
+
+.services-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-intro__inner p + p {
@@ -2260,7 +2278,14 @@
     line-height: 1.35;
   }
 
-  .services-intro__inner p + p {
-    margin-top: 1.5rem;
-  }
+.services-intro__inner p + p {
+  margin-top: 1.5rem;
+}
+}
+
+.services-parking-intro__inner p,
+.services-smart-intro__inner p,
+.services-intro__inner p {
+  font-size: clamp(1.1rem, 1.85vw, 1.4rem);
+  line-height: 1.35;
 }

@@ -137,9 +137,15 @@
 
 .services-five-intro__inner p {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: lowercase;
   color: #5a677b;
   font-size: clamp(1.15rem, 2vw, 1.5rem);
   line-height: 1.45;
+}
+
+.services-five-intro__inner p::first-letter {
+  text-transform: uppercase;
 }
 
 .services-five-intro__inner p + p {
@@ -956,4 +962,9 @@
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+}
+
+.services-five-intro__inner p {
+  font-size: clamp(1.1rem, 1.85vw, 1.4rem);
+  line-height: 1.35;
 }
