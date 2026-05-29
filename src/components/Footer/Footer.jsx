@@ -57,8 +57,8 @@ const contactItems = [
     ),
   },
   {
-    text: '011-35862581',
-    href: 'tel:011-35862581',
+    text: '011 35862581',
+    href: 'tel:01135862581',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path

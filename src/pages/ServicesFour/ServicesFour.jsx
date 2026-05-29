@@ -6,6 +6,7 @@ import projectTimelinesIcon from '../../assets/icons/Project timelines and execu
 import safetyAndLegalStandardsIcon from '../../assets/icons/Safety and legal standards .png'
 import riskOfPenaltiesIcon from '../../assets/icons/Risk of penalties and redesign.png'
 import overallProjectCredibilityIcon from '../../assets/icons/Overall project credibility .png'
+import usePageSeo from '../../utils/usePageSeo'
 import './ServicesFour.css'
 
 const complianceItems = [
@@ -229,6 +230,13 @@ const faqItems = [
 ]
 
 function ServicesFour() {
+  usePageSeo({
+    title: 'Parking Consulting Services | Parking Design & Optimization',
+    description:
+      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
+    path: '/services-4',
+  })
+
   return (
     <section className="services-four-page">
       <section className="services-four-banner">
@@ -407,13 +415,13 @@ function ServicesFour() {
                   Your Project On Track.
                 </p>
 
-                <a className="services-four-approach__support-cta" href="tel:011-35862581">
+                <a className="services-four-approach__support-cta" href="tel:01135862581">
                   <span aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="presentation">
                       <path d="M6.6 4h3.1l1.5 4.1-2 1.8a15.6 15.6 0 0 0 6 6l1.8-2L21 15.3v3.1a2 2 0 0 1-2.2 2A17.9 17.9 0 0 1 3.6 5.2 2 2 0 0 1 6.6 4Z" />
                     </svg>
                   </span>
-                  011-35862581
+                  011 35862581
                 </a>
               </div>
             </div>

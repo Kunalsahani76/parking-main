@@ -22,6 +22,7 @@ import compassImage from '../../assets/images/compass.png'
 import leafImage from '../../assets/images/leaf.png'
 import futureReadyIcon from '../../assets/icons/Future Ready Design.png'
 import revenueStrategyIcon from '../../assets/icons/Revenue Strategy.png'
+import usePageSeo from '../../utils/usePageSeo'
 import './Home.css'
 
 const competencies = [
@@ -84,6 +85,13 @@ const introCarouselImages = [
 function Home() {
   const [introSlideIndex, setIntroSlideIndex] = useState(0)
 
+  usePageSeo({
+    title: 'Best Parking Consultant in India | Parking Design & Traffic Planning Experts',
+    description:
+      'Leading parking consultant in India offering parking design, traffic circulation planning, parking optimization, feasibility studies, and compliance advisory services.',
+    path: '/',
+  })
+
   useEffect(() => {
     const timerId = window.setInterval(() => {
       setIntroSlideIndex((currentIndex) =>
@@ -94,63 +102,6 @@ function Home() {
     return () => window.clearInterval(timerId)
   }, [])
 
-  useEffect(() => {
-    const previousTitle = document.title
-    const existingDescription = document.querySelector('meta[name="description"]')
-    const previousDescription = existingDescription?.getAttribute('content')
-    const existingCanonical = document.querySelector('link[rel="canonical"]')
-    const previousCanonicalHref = existingCanonical?.getAttribute('href')
-
-    document.title = 'Best Parking Consultant in India | The Parking Advisor'
-
-    let metaDescription = existingDescription
-    let createdDescription = false
-
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.setAttribute('name', 'description')
-      document.head.appendChild(metaDescription)
-      createdDescription = true
-    }
-
-    metaDescription.setAttribute(
-      'content',
-      'The Parking Advisor is a leading parking consultant in India offering smart parking solutions for builders, commercial spaces, and government projects. Transform unorganized parking into efficient, scalable systems.',
-    )
-
-    let canonicalLink = existingCanonical
-    let createdCanonical = false
-
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link')
-      canonicalLink.setAttribute('rel', 'canonical')
-      document.head.appendChild(canonicalLink)
-      createdCanonical = true
-    }
-
-    const canonicalOrigin = window.location.origin === 'null'
-      ? 'https://www.theparkingadvisor.com'
-      : window.location.origin
-
-    canonicalLink.setAttribute('href', `${canonicalOrigin}/`)
-
-    return () => {
-      document.title = previousTitle
-
-      if (metaDescription && previousDescription) {
-        metaDescription.setAttribute('content', previousDescription)
-      } else if (metaDescription && createdDescription) {
-        metaDescription.remove()
-      }
-
-      if (canonicalLink && previousCanonicalHref) {
-        canonicalLink.setAttribute('href', previousCanonicalHref)
-      } else if (canonicalLink && createdCanonical) {
-        canonicalLink.remove()
-      }
-    }
-  }, [])
-
   return (
     <section className="home-page">
       <section
@@ -159,8 +110,8 @@ function Home() {
       >
         <div className="home-banner__overlay">
           <div className="home-banner__content">
-            <h1>We help businesses design</h1>
-            <h2>Efficient, Safe And Revenue-Driven Parking Systems.</h2>
+            <h1>Parking Consultant &amp; Parking Design Experts in India</h1>
+            <h2>We Help Businesses Design Efficient, Safe And Revenue-Driven Parking Systems.</h2>
             <p>
               We Help Builders, Commercial Spaces, And Government Bodies
               Transform Unorganized Parking Into Structured, Efficient, And

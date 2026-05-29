@@ -2,13 +2,14 @@ import { useState } from 'react'
 import contactBanner from '../../assets/images/contactbanner.png'
 import lobbyImage from '../../assets/images/lobby.jpg'
 import { redirectToWhatsApp } from '../../utils/whatsapp'
+import usePageSeo from '../../utils/usePageSeo'
 import './Contact.css'
 
 const contactCards = [
   {
     title: 'Phone',
-    detail: '011-35862581',
-    href: 'tel:011-35862581',
+    detail: '011 35862581',
+    href: 'tel:01135862581',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -79,6 +80,13 @@ const mapEmbedUrl =
 
 function Contact() {
   const [formData, setFormData] = useState(initialFormData)
+
+  usePageSeo({
+    title: 'Contact The Parking Advisor | Parking Consultant India',
+    description:
+      'Contact The Parking Advisor for parking planning, traffic circulation, parking optimization, and parking design consulting services across India.',
+    path: '/contact',
+  })
 
   function handleChange(event) {
     const { name, value } = event.target

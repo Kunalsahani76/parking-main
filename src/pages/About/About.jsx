@@ -2,6 +2,7 @@ import aboutDetailImage from '../../assets/images/introbanner.jpg'
 import missionImageOne from '../../assets/images/M1.jpg'
 import missionImageTwo from '../../assets/images/M2.jpg'
 import missionImageThree from '../../assets/images/M3.jpg'
+import usePageSeo from '../../utils/usePageSeo'
 import './About.css'
 
 const whyChooseUsCards = [
@@ -252,6 +253,13 @@ const missionItems = [
 ]
 
 function About() {
+  usePageSeo({
+    title: 'About Us | Parking Design & Traffic Planning Consultants',
+    description:
+      'Learn about The Parking Advisor, experts in parking planning, circulation analysis, parking design, and traffic management consulting in India.',
+    path: '/about',
+  })
+
   return (
     <section className="about-page">
       <section className="about-hero">

@@ -13,6 +13,7 @@ import sweptPathAnalysisIcon from '../../assets/icons/Swept Path Analysis.png'
 import trafficVolumeAnalysisIcon from '../../assets/icons/Traffic Volume Analysis.png'
 import ircDesignParametersIcon from '../../assets/icons/IRC Design Parameters.png'
 import simulationBasedPlanningIcon from '../../assets/icons/Simulation-Based Planning.png'
+import usePageSeo from '../../utils/usePageSeo'
 import './ServicesTwo.css'
 
 const challengeItems = [
@@ -156,6 +157,13 @@ const faqItems = [
 ]
 
 function ServicesTwo() {
+  usePageSeo({
+    title: 'Parking Consulting Services | Parking Design & Optimization',
+    description:
+      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
+    path: '/services-2',
+  })
+
   return (
     <section className="services-two-page">
       <section className="services-two-banner">
@@ -259,13 +267,13 @@ function ServicesTwo() {
               project on track.
             </p>
 
-            <a className="services-two-support__cta" href="tel:011-35862581">
+            <a className="services-two-support__cta" href="tel:01135862581">
               <span aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M6.6 4h3.1l1.5 4.1-2 1.8a15.6 15.6 0 0 0 6 6l1.8-2L21 15.3v3.1a2 2 0 0 1-2.2 2A17.9 17.9 0 0 1 3.6 5.2 2 2 0 0 1 6.6 4Z" />
                 </svg>
               </span>
-              011-35862581
+              011 35862581
             </a>
           </div>
         </div>
