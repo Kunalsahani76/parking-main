@@ -1,4 +1,4 @@
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/icons/main.jpeg'
 import bannerImage from '../../assets/images/banner.jpg'
 import carImage from '../../assets/images/car.jpg'
 import carOneImage from '../../assets/images/car1.jpg'

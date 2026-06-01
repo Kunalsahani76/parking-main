@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/icons/main.jpeg'
 import trafficIcon from '../../assets/icons/Traffic Flow & Circulation Planning.png'
 import smartIcon from '../../assets/icons/SMART & AUTOMATED PARKING.png'
 import complianceIcon from '../../assets/icons/Government & Compliance Advisory.png'
