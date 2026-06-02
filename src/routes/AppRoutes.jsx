@@ -22,15 +22,15 @@ function AppRoutes() {
         ? <Contact />
       : currentPath === '/services'
         ? <Services />
-        : currentPath === '/services-3'
+        : currentPath === '/services-3' || currentPath === '/services/smart-automated-parking'
           ? <Services />
-        : currentPath === '/services-4'
+        : currentPath === '/services-4' || currentPath === '/services/government-compliance-advisory'
           ? <ServicesFour />
-        : currentPath === '/services-5'
+        : currentPath === '/services-5' || currentPath === '/services/multilevel-basement-parking-design'
           ? <ServicesFive />
-        : currentPath === '/services-6'
+        : currentPath === '/services-6' || currentPath === '/services/parking-revenue-efficiency-enhancement'
           ? <ServicesSix />
-        : currentPath === '/services-2'
+        : currentPath === '/services-2' || currentPath === '/services/traffic-flow-circulation-planning'
           ? <ServicesTwo />
         : currentPath === '/success-story'
           ? <SuccessStory />

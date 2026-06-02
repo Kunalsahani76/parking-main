@@ -13,11 +13,11 @@ function Header() {
   const closeTimerRef = useRef(null)
 
   const serviceItems = [
-    { label: 'TRAFFIC FLOW & CIRCULATION PLANNING', href: '/services-2', icon: trafficIcon },
-    { label: 'SMART & AUTOMATED PARKING', href: '/services-3', icon: smartIcon },
-    { label: 'GOVERNMENT & COMPLIANCE ADVISORY', href: '/services-4', icon: complianceIcon },
-    { label: 'MULTI-LEVEL & BASEMENT PARKING', href: '/services-5', icon: multilevelIcon },
-    { label: 'PARKING REVENUE & EFFICIENCY ENHANCEMENT', href: '/services-6', icon: revenueIcon },
+    { label: 'TRAFFIC FLOW & CIRCULATION PLANNING', href: '/services/traffic-flow-circulation-planning', icon: trafficIcon },
+    { label: 'SMART & AUTOMATED PARKING', href: '/services/smart-automated-parking', icon: smartIcon },
+    { label: 'GOVERNMENT & COMPLIANCE ADVISORY', href: '/services/government-compliance-advisory', icon: complianceIcon },
+    { label: 'MULTI-LEVEL & BASEMENT PARKING', href: '/services/multilevel-basement-parking-design', icon: multilevelIcon },
+    { label: 'PARKING REVENUE & EFFICIENCY ENHANCEMENT', href: '/services/parking-revenue-efficiency-enhancement', icon: revenueIcon },
   ]
 
   useEffect(() => () => {

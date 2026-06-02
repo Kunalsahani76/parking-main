@@ -261,10 +261,19 @@ const benefitsItems = [
 
 function ServicesSix() {
   usePageSeo({
-    title: 'Parking Consulting Services | Parking Design & Optimization',
+    title: 'Parking Revenue & Efficiency Enhancement Services | The Parking Advisor',
     description:
-      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-    path: '/services-6',
+      'Maximize parking revenue and operational efficiency with strategic parking optimization, utilization planning, analytics, and revenue enhancement solutions.',
+    path: '/services/parking-revenue-efficiency-enhancement',
+    keywords:
+      'parking revenue enhancement, parking efficiency consultant, parking optimization services, parking utilization strategy, parking management consultant, parking revenue audit',
+    openGraph: {
+      title: 'Parking Revenue & Efficiency Enhancement Services',
+      description:
+        'Strategic parking optimization and revenue enhancement solutions for higher operational efficiency and profitability.',
+      url: 'https://www.theparkingadvisor.com/services/parking-revenue-efficiency-enhancement',
+      type: 'website',
+    },
   })
 
   return (

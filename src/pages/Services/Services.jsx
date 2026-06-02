@@ -354,13 +354,30 @@ const parkingPlanningItems = [
 ]
 
 function Services() {
-  const isServicesThree = window.location.pathname === '/services-3'
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const isServicesThree =
+    currentPath === '/services-3' || currentPath === '/services/smart-automated-parking'
 
   usePageSeo({
-    title: 'Parking Consulting Services | Parking Design & Optimization',
-    description:
-      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-    path: isServicesThree ? '/services-3' : '/services',
+    title: isServicesThree
+      ? 'Smart & Automated Parking Solutions | The Parking Advisor'
+      : 'Parking Consulting Services | Parking Design & Optimization',
+    description: isServicesThree
+      ? 'Advanced smart and automated parking solutions including intelligent parking systems, automation technologies, access control, and parking optimization strategies.'
+      : 'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
+    path: isServicesThree ? '/services/smart-automated-parking' : '/services',
+    keywords: isServicesThree
+      ? 'smart parking solutions, automated parking systems, intelligent parking management, automated parking consultant, smart parking technology, parking automation'
+      : undefined,
+    openGraph: isServicesThree
+      ? {
+          title: 'Smart & Automated Parking Solutions',
+          description:
+            'Future-ready smart parking systems designed for efficiency, automation, and enhanced parking management.',
+          url: 'https://www.theparkingadvisor.com/services/smart-automated-parking',
+          type: 'website',
+        }
+      : undefined,
   })
 
   return (

@@ -231,10 +231,19 @@ const faqItems = [
 
 function ServicesFour() {
   usePageSeo({
-    title: 'Parking Consulting Services | Parking Design & Optimization',
+    title: 'Government & Compliance Advisory Services | The Parking Advisor',
     description:
-      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-    path: '/services-4',
+      'Professional government and compliance advisory services for approval-ready parking planning, regulatory compliance, fire safety, accessibility standards, and authority approvals.',
+    path: '/services/government-compliance-advisory',
+    keywords:
+      'parking compliance consultant, government approval advisory, parking regulations consultant, approval ready planning, fire safety compliance, parking consultant India',
+    openGraph: {
+      title: 'Government & Compliance Advisory Services',
+      description:
+        'Expert compliance advisory solutions for parking approvals, regulations, accessibility, and safety standards.',
+      url: 'https://www.theparkingadvisor.com/services/government-compliance-advisory',
+      type: 'website',
+    },
   })
 
   return (

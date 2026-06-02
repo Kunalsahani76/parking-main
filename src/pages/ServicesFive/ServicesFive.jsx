@@ -285,10 +285,19 @@ const faqItems = [
 
 function ServicesFive() {
   usePageSeo({
-    title: 'Parking Consulting Services | Parking Design & Optimization',
+    title: 'Multi-Level & Basement Parking Design Consultant | The Parking Advisor',
     description:
-      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-    path: '/services-5',
+      'Specialized multi-level and basement parking design services including ramp planning, space optimization, fire safety, ventilation, and circulation management.',
+    path: '/services/multilevel-basement-parking-design',
+    keywords:
+      'multi-level parking design, basement parking consultant, parking layout design, ramp design consultant, parking structure planning, parking designer India',
+    openGraph: {
+      title: 'Multi-Level & Basement Parking Design Consultant',
+      description:
+        'Efficient multi-level and basement parking planning solutions for commercial and residential projects.',
+      url: 'https://www.theparkingadvisor.com/services/multilevel-basement-parking-design',
+      type: 'website',
+    },
   })
 
   return (

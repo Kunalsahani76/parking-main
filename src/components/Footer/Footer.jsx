@@ -186,10 +186,18 @@ function Footer() {
     '/services-4',
     '/services-5',
     '/services-6',
+    '/services/traffic-flow-circulation-planning',
+    '/services/smart-automated-parking',
+    '/services/government-compliance-advisory',
+    '/services/multilevel-basement-parking-design',
+    '/services/parking-revenue-efficiency-enhancement',
   ]
   const showPreFooterSections = !hiddenPreFooterPaths.includes(currentPath)
   const showExpertiseSection = currentPath !== '/services'
-  const showFooterProcess = currentPath !== '/services' && currentPath !== '/services-2'
+  const showFooterProcess =
+    currentPath !== '/services' &&
+    currentPath !== '/services-2' &&
+    currentPath !== '/services/traffic-flow-circulation-planning'
 
   return (
     <>
