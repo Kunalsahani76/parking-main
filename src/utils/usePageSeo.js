@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 
 const siteUrl = 'https://www.theparkingadvisor.com'
+const defaultOgImage = `${siteUrl}/images/og-home.jpg`
+const defaultSeoDescription =
+  'Get the best parking consultancy services for efficient parking design, traffic flow planning, and space optimization.'
 
 function findOrCreateMeta(name) {
   const existingMeta = document.querySelector(`meta[name="${name}"]`)
@@ -53,6 +56,7 @@ function usePageSeo({ title, description, path, keywords, openGraph }) {
   useEffect(() => {
     const metaDescription = findOrCreateMeta('description')
     const canonical = findOrCreateCanonical()
+    const pageUrl = openGraph?.url || `${siteUrl}${path}`
 
     document.title = title
     metaDescription.setAttribute('content', description)
@@ -65,28 +69,40 @@ function usePageSeo({ title, description, path, keywords, openGraph }) {
       removeMeta('meta[name="keywords"]')
     }
 
-    if (openGraph) {
-      const ogValues = {
-        'og:title': openGraph.title,
-        'og:description': openGraph.description,
-        'og:url': openGraph.url || `${siteUrl}${path}`,
-        'og:type': openGraph.type || 'website',
+    const ogTitle = openGraph?.title || title
+    const ogDescription = openGraph?.description || defaultSeoDescription
+    const ogValues = {
+      'og:type': openGraph?.type || 'website',
+      'og:site_name': 'The Parking Advisor',
+      'og:title': ogTitle,
+      'og:description': ogDescription,
+      'og:url': pageUrl,
+      'og:image': openGraph?.image || defaultOgImage,
+      'og:image:width': '1200',
+      'og:image:height': '630',
+      'og:locale': 'en_IN',
+    }
+
+    Object.entries(ogValues).forEach(([property, content]) => {
+      if (!content) {
+        return
       }
 
-      Object.entries(ogValues).forEach(([property, content]) => {
-        if (!content) {
-          return
-        }
+      const meta = findOrCreatePropertyMeta(property)
+      meta.setAttribute('content', content)
+    })
 
-        const meta = findOrCreatePropertyMeta(property)
-        meta.setAttribute('content', content)
-      })
-    } else {
-      removeMeta('meta[property="og:title"]')
-      removeMeta('meta[property="og:description"]')
-      removeMeta('meta[property="og:url"]')
-      removeMeta('meta[property="og:type"]')
+    const twitterValues = {
+      'twitter:card': 'summary_large_image',
+      'twitter:title': ogTitle,
+      'twitter:description': ogDescription,
+      'twitter:image': openGraph?.image || defaultOgImage,
     }
+
+    Object.entries(twitterValues).forEach(([name, content]) => {
+      const meta = findOrCreateMeta(name)
+      meta.setAttribute('content', content)
+    })
   }, [description, keywords, openGraph, path, title])
 }
 
