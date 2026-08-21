@@ -258,6 +258,8 @@ function About() {
     description:
       'Learn about The Parking Advisor, experts in parking planning, circulation analysis, parking design, and traffic management consulting in India.',
     path: '/about',
+    keywords:
+      'about The Parking Advisor, parking planning experts, parking design consultants, traffic management consultants, circulation analysis, parking consultancy India',
   })
 
   return (

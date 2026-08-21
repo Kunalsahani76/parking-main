@@ -86,6 +86,8 @@ function Contact() {
     description:
       'Contact The Parking Advisor for parking planning, traffic circulation, parking optimization, and parking design consulting services across India.',
     path: '/contact',
+    keywords:
+      'contact parking consultant, The Parking Advisor contact, parking consultant India, parking design consulting, traffic circulation consultant, parking optimization services',
   })
 
   function handleChange(event) {

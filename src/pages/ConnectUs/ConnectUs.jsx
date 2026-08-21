@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { redirectToWhatsApp } from '../../utils/whatsapp'
+import usePageSeo from '../../utils/usePageSeo'
 import './ConnectUs.css'
 
 const initialFormData = {
@@ -12,6 +13,15 @@ const initialFormData = {
 
 function ConnectUs() {
   const [formData, setFormData] = useState(initialFormData)
+
+  usePageSeo({
+    title: 'Connect With The Parking Advisor | Parking Consultancy Inquiry',
+    description:
+      'Send your parking consultancy inquiry to The Parking Advisor for parking design, traffic circulation, optimization, compliance, and smart parking solutions.',
+    path: '/connect-us',
+    keywords:
+      'parking consultancy inquiry, connect parking consultant, parking design inquiry, smart parking solutions, traffic circulation consultant, parking advisory services',
+  })
 
   function handleChange(event) {
     const { name, value } = event.target

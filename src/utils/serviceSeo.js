@@ -1,6 +1,14 @@
 const siteUrl = 'https://www.theparkingadvisor.com'
 
 export const serviceSeo = {
+  services: {
+    title: 'Parking Consulting Services | Parking Design & Optimization',
+    description:
+      'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
+    path: '/services',
+    keywords:
+      'parking consulting services, parking design consultant, parking optimization services, parking feasibility study, traffic circulation planning, parking compliance advisory, parking consultant India',
+  },
   trafficFlow: {
     title: 'Traffic Flow & Circulation Planning Consultant | The Parking Advisor',
     description:

@@ -90,6 +90,8 @@ function Home() {
     description:
       'Leading parking consultant in India offering parking design, traffic circulation planning, parking optimization, feasibility studies, and compliance advisory services.',
     path: '/',
+    keywords:
+      'parking consultant India, parking design consultant, traffic planning experts, parking optimization, parking feasibility studies, traffic circulation planning, parking compliance advisory',
   })
 
   useEffect(() => {

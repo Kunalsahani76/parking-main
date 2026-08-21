@@ -364,12 +364,7 @@ function Services() {
       ? withServiceOpenGraph(serviceSeo.smartAutomatedParking, {
           title: 'Smart & Automated Parking Solutions',
         })
-      : {
-          title: 'Parking Consulting Services | Parking Design & Optimization',
-          description:
-            'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-          path: '/services',
-        },
+      : withServiceOpenGraph(serviceSeo.services),
   )
 
   return (

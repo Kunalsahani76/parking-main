@@ -4,6 +4,7 @@ import kaImage from '../../assets/images/ka.png'
 import nagarImage from '../../assets/images/nagar.png'
 import plusImage from '../../assets/images/plus.png'
 import symImage from '../../assets/images/sym.png'
+import usePageSeo from '../../utils/usePageSeo'
 import './SuccessStory.css'
 
 const impactStats = [
@@ -23,6 +24,15 @@ const trustedClients = [
 const marqueeClients = [...trustedClients, ...trustedClients]
 
 function SuccessStory() {
+  usePageSeo({
+    title: 'Success Stories | Smart Parking Projects Across India',
+    description:
+      'Explore The Parking Advisor success stories, trusted clients, and smart parking projects delivered across India with efficient parking design and optimization.',
+    path: '/success-story',
+    keywords:
+      'parking success stories, smart parking projects India, parking consultancy clients, parking design projects, parking optimization case studies, The Parking Advisor projects',
+  })
+
   return (
     <section className="success-story-page">
       <section className="success-story-hero">
