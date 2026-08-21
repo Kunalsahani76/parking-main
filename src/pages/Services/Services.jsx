@@ -19,6 +19,7 @@ import apiLayerIcon from '../../assets/icons/API Layer.png'
 import cloudEngineIcon from '../../assets/icons/Cloud Engine.png'
 import edgeNodesIcon from '../../assets/icons/Edge Nodes.png'
 import analyticsEngineIcon from '../../assets/icons/Analytics Engine.png'
+import { serviceSeo, withServiceOpenGraph } from '../../utils/serviceSeo'
 import usePageSeo from '../../utils/usePageSeo'
 import './Services.css'
 
@@ -358,27 +359,18 @@ function Services() {
   const isServicesThree =
     currentPath === '/services-3' || currentPath === '/services/smart-automated-parking'
 
-  usePageSeo({
-    title: isServicesThree
-      ? 'Smart & Automated Parking Solutions | The Parking Advisor'
-      : 'Parking Consulting Services | Parking Design & Optimization',
-    description: isServicesThree
-      ? 'Advanced smart and automated parking solutions including intelligent parking systems, automation technologies, access control, and parking optimization strategies.'
-      : 'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
-    path: isServicesThree ? '/services/smart-automated-parking' : '/services',
-    keywords: isServicesThree
-      ? 'smart parking solutions, automated parking systems, intelligent parking management, automated parking consultant, smart parking technology, parking automation'
-      : undefined,
-    openGraph: isServicesThree
-      ? {
+  usePageSeo(
+    isServicesThree
+      ? withServiceOpenGraph(serviceSeo.smartAutomatedParking, {
           title: 'Smart & Automated Parking Solutions',
+        })
+      : {
+          title: 'Parking Consulting Services | Parking Design & Optimization',
           description:
-            'Future-ready smart parking systems designed for efficiency, automation, and enhanced parking management.',
-          url: 'https://www.theparkingadvisor.com/services/smart-automated-parking',
-          type: 'website',
-        }
-      : undefined,
-  })
+            'Explore parking consulting services including parking design, feasibility studies, traffic circulation planning, parking optimization, and compliance advisory.',
+          path: '/services',
+        },
+  )
 
   return (
     <section className="services-page">

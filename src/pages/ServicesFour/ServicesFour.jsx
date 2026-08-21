@@ -6,6 +6,7 @@ import projectTimelinesIcon from '../../assets/icons/Project timelines and execu
 import safetyAndLegalStandardsIcon from '../../assets/icons/Safety and legal standards .png'
 import riskOfPenaltiesIcon from '../../assets/icons/Risk of penalties and redesign.png'
 import overallProjectCredibilityIcon from '../../assets/icons/Overall project credibility .png'
+import { serviceSeo, withServiceOpenGraph } from '../../utils/serviceSeo'
 import usePageSeo from '../../utils/usePageSeo'
 import './ServicesFour.css'
 
@@ -230,21 +231,9 @@ const faqItems = [
 ]
 
 function ServicesFour() {
-  usePageSeo({
-    title: 'Government & Compliance Advisory Services | The Parking Advisor',
-    description:
-      'Professional government and compliance advisory services for approval-ready parking planning, regulatory compliance, fire safety, accessibility standards, and authority approvals.',
-    path: '/services/government-compliance-advisory',
-    keywords:
-      'parking compliance consultant, government approval advisory, parking regulations consultant, approval ready planning, fire safety compliance, parking consultant India',
-    openGraph: {
-      title: 'Government & Compliance Advisory Services',
-      description:
-        'Expert compliance advisory solutions for parking approvals, regulations, accessibility, and safety standards.',
-      url: 'https://www.theparkingadvisor.com/services/government-compliance-advisory',
-      type: 'website',
-    },
-  })
+  usePageSeo(withServiceOpenGraph(serviceSeo.governmentCompliance, {
+    title: 'Government & Compliance Advisory Services',
+  }))
 
   return (
     <section className="services-four-page">

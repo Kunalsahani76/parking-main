@@ -13,6 +13,7 @@ import sweptPathAnalysisIcon from '../../assets/icons/Swept Path Analysis.png'
 import trafficVolumeAnalysisIcon from '../../assets/icons/Traffic Volume Analysis.png'
 import ircDesignParametersIcon from '../../assets/icons/IRC Design Parameters.png'
 import simulationBasedPlanningIcon from '../../assets/icons/Simulation-Based Planning.png'
+import { serviceSeo, withServiceOpenGraph } from '../../utils/serviceSeo'
 import usePageSeo from '../../utils/usePageSeo'
 import './ServicesTwo.css'
 
@@ -157,21 +158,9 @@ const faqItems = [
 ]
 
 function ServicesTwo() {
-  usePageSeo({
-    title: 'Traffic Flow & Circulation Planning Consultant | The Parking Advisor',
-    description:
-      'Expert traffic flow and circulation planning solutions for commercial, residential, and mixed-use developments. Improve vehicle movement, reduce congestion, and optimize parking efficiency.',
-    path: '/services/traffic-flow-circulation-planning',
-    keywords:
-      'traffic flow planning, circulation planning, vehicle circulation consultant, traffic consultant, parking circulation design, traffic movement planning, parking traffic consultant',
-    openGraph: {
-      title: 'Traffic Flow & Circulation Planning Consultant',
-      description:
-        'Smart traffic circulation and vehicle movement planning solutions for optimized parking operations and improved user experience.',
-      url: 'https://www.theparkingadvisor.com/services/traffic-flow-circulation-planning',
-      type: 'website',
-    },
-  })
+  usePageSeo(withServiceOpenGraph(serviceSeo.trafficFlow, {
+    title: 'Traffic Flow & Circulation Planning Consultant',
+  }))
 
   return (
     <section className="services-two-page">

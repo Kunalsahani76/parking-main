@@ -5,6 +5,7 @@ import landUtilizationIcon from '../../assets/icons/Land Utilization.png'
 import vehicleMovementIcon from '../../assets/icons/Vehicle Movement.png'
 import safetyComplianceIcon from '../../assets/icons/Safety Compliance.png'
 import projectValueIcon from '../../assets/icons/Project Value.png'
+import { serviceSeo, withServiceOpenGraph } from '../../utils/serviceSeo'
 import usePageSeo from '../../utils/usePageSeo'
 import './ServicesFive.css'
 
@@ -284,21 +285,9 @@ const faqItems = [
 ]
 
 function ServicesFive() {
-  usePageSeo({
-    title: 'Multi-Level & Basement Parking Design Consultant | The Parking Advisor',
-    description:
-      'Specialized multi-level and basement parking design services including ramp planning, space optimization, fire safety, ventilation, and circulation management.',
-    path: '/services/multilevel-basement-parking-design',
-    keywords:
-      'multi-level parking design, basement parking consultant, parking layout design, ramp design consultant, parking structure planning, parking designer India',
-    openGraph: {
-      title: 'Multi-Level & Basement Parking Design Consultant',
-      description:
-        'Efficient multi-level and basement parking planning solutions for commercial and residential projects.',
-      url: 'https://www.theparkingadvisor.com/services/multilevel-basement-parking-design',
-      type: 'website',
-    },
-  })
+  usePageSeo(withServiceOpenGraph(serviceSeo.multilevelBasement, {
+    title: 'Multi-Level & Basement Parking Design Consultant',
+  }))
 
   return (
     <section className="services-five-page">

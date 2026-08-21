@@ -6,6 +6,7 @@ import reducedCostsIcon from '../../assets/icons/Reduced Costs.png'
 import utilizationIcon from '../../assets/icons/Utilization.png'
 import leakageControlIcon from '../../assets/icons/Leakage Control.png'
 import profitabilityIcon from '../../assets/icons/Profitability.png'
+import { serviceSeo, withServiceOpenGraph } from '../../utils/serviceSeo'
 import usePageSeo from '../../utils/usePageSeo'
 import './ServicesSix.css'
 
@@ -260,21 +261,9 @@ const benefitsItems = [
 ]
 
 function ServicesSix() {
-  usePageSeo({
-    title: 'Parking Revenue & Efficiency Enhancement Services | The Parking Advisor',
-    description:
-      'Maximize parking revenue and operational efficiency with strategic parking optimization, utilization planning, analytics, and revenue enhancement solutions.',
-    path: '/services/parking-revenue-efficiency-enhancement',
-    keywords:
-      'parking revenue enhancement, parking efficiency consultant, parking optimization services, parking utilization strategy, parking management consultant, parking revenue audit',
-    openGraph: {
-      title: 'Parking Revenue & Efficiency Enhancement Services',
-      description:
-        'Strategic parking optimization and revenue enhancement solutions for higher operational efficiency and profitability.',
-      url: 'https://www.theparkingadvisor.com/services/parking-revenue-efficiency-enhancement',
-      type: 'website',
-    },
-  })
+  usePageSeo(withServiceOpenGraph(serviceSeo.revenueEfficiency, {
+    title: 'Parking Revenue & Efficiency Enhancement Services',
+  }))
 
   return (
     <section className="services-six-page">
