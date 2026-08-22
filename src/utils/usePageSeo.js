@@ -44,6 +44,18 @@ function findOrCreateCanonical() {
   return canonical
 }
 
+function findOrCreateTitle() {
+  const existingTitle = document.querySelector('title')
+
+  if (existingTitle) {
+    return existingTitle
+  }
+
+  const titleElement = document.createElement('title')
+  document.head.appendChild(titleElement)
+  return titleElement
+}
+
 function removeMeta(selector) {
   const existingMeta = document.querySelector(selector)
 
@@ -52,22 +64,50 @@ function removeMeta(selector) {
   }
 }
 
+function insertAfter(referenceNode, node) {
+  const nextNode = referenceNode.nextSibling
+
+  if (nextNode !== node) {
+    document.head.insertBefore(node, nextNode)
+  }
+}
+
+function orderPrimarySeoTags(titleElement, descriptionElement, keywordsElement) {
+  const viewport = document.querySelector('meta[name="viewport"]')
+
+  if (viewport) {
+    insertAfter(viewport, titleElement)
+  } else if (document.head.firstChild !== titleElement) {
+    document.head.insertBefore(titleElement, document.head.firstChild)
+  }
+
+  insertAfter(titleElement, descriptionElement)
+
+  if (keywordsElement) {
+    insertAfter(descriptionElement, keywordsElement)
+  }
+}
+
 function usePageSeo({ title, description, path, keywords, openGraph }) {
   useEffect(() => {
+    const titleElement = findOrCreateTitle()
     const metaDescription = findOrCreateMeta('description')
     const canonical = findOrCreateCanonical()
     const pageUrl = openGraph?.url || `${siteUrl}${path}`
+    let metaKeywords = null
 
-    document.title = title
+    titleElement.textContent = title
     metaDescription.setAttribute('content', description)
     canonical.setAttribute('href', `${siteUrl}${path}`)
 
     if (keywords) {
-      const metaKeywords = findOrCreateMeta('keywords')
+      metaKeywords = findOrCreateMeta('keywords')
       metaKeywords.setAttribute('content', keywords)
     } else {
       removeMeta('meta[name="keywords"]')
     }
+
+    orderPrimarySeoTags(titleElement, metaDescription, metaKeywords)
 
     const ogTitle = openGraph?.title || title
     const ogDescription = openGraph?.description || defaultSeoDescription
