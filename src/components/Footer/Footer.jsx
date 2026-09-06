@@ -190,7 +190,7 @@ function Footer() {
     '/services/smart-automated-parking',
     '/services/government-compliance-advisory',
     '/services/multilevel-basement-parking-design',
-    '/services/parking-revenue-efficiency-enhancement',
+    '/services/parking-revenue',
   ]
   const showPreFooterSections = !hiddenPreFooterPaths.includes(currentPath)
   const showExpertiseSection = currentPath !== '/services'

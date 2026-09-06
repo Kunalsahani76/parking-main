@@ -28,7 +28,7 @@ function AppRoutes() {
           ? <ServicesFour />
         : currentPath === '/services-5' || currentPath === '/services/multilevel-basement-parking-design'
           ? <ServicesFive />
-        : currentPath === '/services-6' || currentPath === '/services/parking-revenue-efficiency-enhancement'
+        : currentPath === '/services-6' || currentPath === '/services/parking-revenue'
           ? <ServicesSix />
         : currentPath === '/services-2' || currentPath === '/services/traffic-flow-circulation-planning'
           ? <ServicesTwo />

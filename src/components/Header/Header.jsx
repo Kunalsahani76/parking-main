@@ -17,7 +17,7 @@ function Header() {
     { label: 'SMART & AUTOMATED PARKING', href: '/services/smart-automated-parking', icon: smartIcon },
     { label: 'GOVERNMENT & COMPLIANCE ADVISORY', href: '/services/government-compliance-advisory', icon: complianceIcon },
     { label: 'MULTI-LEVEL & BASEMENT PARKING', href: '/services/multilevel-basement-parking-design', icon: multilevelIcon },
-    { label: 'PARKING REVENUE & EFFICIENCY ENHANCEMENT', href: '/services/parking-revenue-efficiency-enhancement', icon: revenueIcon },
+    { label: 'PARKING REVENUE & EFFICIENCY ENHANCEMENT', href: '/services/parking-revenue', icon: revenueIcon },
   ]
 
   useEffect(() => () => {

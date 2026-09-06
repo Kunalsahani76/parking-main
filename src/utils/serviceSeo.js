@@ -45,7 +45,7 @@ export const serviceSeo = {
     title: 'Parking Revenue & Efficiency Enhancement Services | The Parking Advisor',
     description:
       'Maximize parking revenue and operational efficiency with strategic parking optimization, utilization planning, analytics, and revenue enhancement solutions.',
-    path: '/services/parking-revenue-efficiency-enhancement',
+    path: '/services/parking-revenue',
     keywords:
       'parking revenue enhancement, parking efficiency consultant, parking optimization services, parking utilization strategy, parking management consultant, parking revenue audit',
   },
