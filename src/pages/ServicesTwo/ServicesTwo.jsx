@@ -6,7 +6,7 @@ import parkingLobbyImage from '../../assets/images/Internal Circulation Design.j
 import designImage from '../../assets/images/Pedestrian-Vehicle Segregation.jpg'
 import buildingImage from '../../assets/images/Entry & Exit Engineering.jpg'
 import sectionBackground from '../../assets/images/Our Expertise.png'
-import entryExitBottlenecksIcon from '../../assets/icons/Entry:exit bottlenecks .png'
+import entryExitBottlenecksIcon from '../../assets/icons/Entry_exit bottlenecks .png'
 import inefficientTurningMovementsIcon from '../../assets/icons/Inefficient turning movements .png'
 import pedestrianSafetyRisksIcon from '../../assets/icons/Pedestrian safety risks .png'
 import sweptPathAnalysisIcon from '../../assets/icons/Swept Path Analysis.png'

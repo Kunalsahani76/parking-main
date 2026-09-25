@@ -1,30 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.theparkingadvisor.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/about</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services/traffic-flow-circulation-planning</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services/smart-automated-parking</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services/government-compliance-advisory</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services/multilevel-basement-parking-design</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/services/parking-revenue</loc>
-  </url>
-  <url>
-    <loc>https://www.theparkingadvisor.com/contact</loc>
-  </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/about</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services/traffic-flow-circulation-planning</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services/smart-automated-parking</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services/government-compliance-advisory</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services/multilevel-basement-parking-design</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/services/parking-revenue</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://www.theparkingadvisor.com/contact</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
