@@ -1,5 +1,6 @@
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
+import FloatingContactActions from '../components/FloatingContactActions/FloatingContactActions'
 
 function MainLayout({ children }) {
   return (
@@ -7,6 +8,7 @@ function MainLayout({ children }) {
       <Header />
       <main>{children}</main>
       <Footer />
+      <FloatingContactActions />
     </div>
   )
 }
