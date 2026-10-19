@@ -119,26 +119,24 @@ function Header() {
               </button>
             </div>
 
-            {isServicesOpen && (
-              <div className="site-header__dropdown-menu">
-                {serviceItems.map((item) => (
-                  <a
-                    className="site-header__service-card"
-                    key={item.label}
-                    href={item.href}
-                    onClick={() => {
-                      setIsServicesOpen(false)
-                      setIsNavOpen(false)
-                    }}
-                  >
-                    <span className="site-header__service-icon">
-                      <img src={item.icon} alt="" aria-hidden="true" />
-                    </span>
-                    <span className="site-header__service-label">{item.label}</span>
-                  </a>
-                ))}
-              </div>
-            )}
+            <div className={`site-header__dropdown-menu${isServicesOpen ? ' is-open' : ''}`}>
+              {serviceItems.map((item) => (
+                <a
+                  className="site-header__service-card"
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => {
+                    setIsServicesOpen(false)
+                    setIsNavOpen(false)
+                  }}
+                >
+                  <span className="site-header__service-icon">
+                    <img src={item.icon} alt="" aria-hidden="true" />
+                  </span>
+                  <span className="site-header__service-label">{item.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
           <a href="/contact" onClick={() => setIsNavOpen(false)}>
             CONTACT

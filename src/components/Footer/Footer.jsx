@@ -19,6 +19,11 @@ const serviceLinks = [
   { label: 'Revenue Audits', href: '/services' },
   { label: 'Design Consulting', href: '/services' },
   { label: 'Feasibility Studies', href: '/services' },
+  { label: 'Traffic Flow & Circulation Planning', href: '/services/traffic-flow-circulation-planning' },
+  { label: 'Smart & Automated Parking', href: '/services/smart-automated-parking' },
+  { label: 'Government & Compliance Advisory', href: '/services/government-compliance-advisory' },
+  { label: 'Multi-Level & Basement Parking', href: '/services/multilevel-basement-parking-design' },
+  { label: 'Parking Revenue & Efficiency Enhancement', href: '/services/parking-revenue' },
 ]
 
 const contactItems = [
