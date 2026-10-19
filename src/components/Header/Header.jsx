@@ -10,7 +10,9 @@ import './Header.css'
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isBlogsOpen, setIsBlogsOpen] = useState(false)
   const closeTimerRef = useRef(null)
+  const blogCloseTimerRef = useRef(null)
 
   const serviceItems = [
     { label: 'TRAFFIC FLOW & CIRCULATION PLANNING', href: '/services/traffic-flow-circulation-planning', icon: trafficIcon },
@@ -23,6 +25,9 @@ function Header() {
   useEffect(() => () => {
     if (closeTimerRef.current) {
       window.clearTimeout(closeTimerRef.current)
+    }
+    if (blogCloseTimerRef.current) {
+      window.clearTimeout(blogCloseTimerRef.current)
     }
   }, [])
 
@@ -46,6 +51,25 @@ function Header() {
     }, 180)
   }
 
+  const openBlogsMenu = () => {
+    if (blogCloseTimerRef.current) {
+      window.clearTimeout(blogCloseTimerRef.current)
+      blogCloseTimerRef.current = null
+    }
+    setIsServicesOpen(false)
+    setIsBlogsOpen(true)
+  }
+
+  const closeBlogsMenuWithDelay = () => {
+    if (blogCloseTimerRef.current) {
+      window.clearTimeout(blogCloseTimerRef.current)
+    }
+    blogCloseTimerRef.current = window.setTimeout(() => {
+      setIsBlogsOpen(false)
+      blogCloseTimerRef.current = null
+    }, 180)
+  }
+
   return (
     <header className="site-header">
       <div className="container site-header__inner">
@@ -62,6 +86,7 @@ function Header() {
           onClick={() => {
             setIsNavOpen((currentValue) => !currentValue)
             setIsServicesOpen(false)
+            setIsBlogsOpen(false)
           }}
         >
           <span className="site-header__menu-icon" aria-hidden="true">
@@ -141,6 +166,49 @@ function Header() {
           <a href="/contact" onClick={() => setIsNavOpen(false)}>
             CONTACT
           </a>
+          <div
+            className="site-header__dropdown site-header__blog-dropdown"
+            onMouseEnter={openBlogsMenu}
+            onMouseLeave={closeBlogsMenuWithDelay}
+            onFocus={openBlogsMenu}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                if (blogCloseTimerRef.current) {
+                  window.clearTimeout(blogCloseTimerRef.current)
+                  blogCloseTimerRef.current = null
+                }
+                setIsBlogsOpen(false)
+              }
+            }}
+          >
+            <div className="site-header__dropdown-header">
+              <button
+                type="button"
+                className="site-header__dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded={isBlogsOpen}
+                onClick={() => {
+                  setIsServicesOpen(false)
+                  setIsBlogsOpen((currentValue) => !currentValue)
+                }}
+              >
+                BLOGS
+              </button>
+              <button
+                type="button"
+                className="site-header__dropdown-trigger"
+                aria-label="Toggle blogs menu"
+                aria-expanded={isBlogsOpen}
+                onClick={() => setIsBlogsOpen((currentValue) => !currentValue)}
+              >
+                <span aria-hidden="true">{isBlogsOpen ? '−' : '+'}</span>
+              </button>
+            </div>
+            <div className={`site-header__blog-menu${isBlogsOpen ? ' is-open' : ''}`}>
+              <a className="site-header__blog-link" href="/blogs" onClick={() => { setIsBlogsOpen(false); setIsNavOpen(false) }}>All Blogs</a>
+              <a className="site-header__blog-link" href="/admin" onClick={() => { setIsBlogsOpen(false); setIsNavOpen(false) }}>Admin Panel</a>
+            </div>
+          </div>
           <a
             className="site-header__mobile-cta"
             href="/connect-us"

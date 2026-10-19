@@ -32,29 +32,6 @@ const applicationItems = [
   { title: 'RAILWAY STATIONS', image: railwayStationsImage },
 ]
 
-const processSteps = [
-  {
-    title: 'Consultation',
-    description:
-      'We begin by understanding your specific needs, challenges, and long-term goals.',
-  },
-  {
-    title: 'Planning',
-    description:
-      'Detailed schematic designs and volume analyses are created for optimal efficiency.',
-  },
-  {
-    title: 'Implementation',
-    description:
-      'Our experts oversee the integration of technology and physical design layouts.',
-  },
-  {
-    title: 'Optimization',
-    description:
-      'Continuous monitoring and scaling to ensure long-term ROI and mobility.',
-  },
-]
-
 const benefitsItems = [
   'Up to 30% better space utilization',
   'Reduced congestion and waiting time',
@@ -651,13 +628,13 @@ function Services() {
               project on track.
             </p>
 
-            <a className="services-support__cta" href="tel:01135862581">
+            <a className="services-support__cta" href="tel:+918368431399">
               <span aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M6.6 4h3.1l1.5 4.1-2 1.8a15.6 15.6 0 0 0 6 6l1.8-2L21 15.3v3.1a2 2 0 0 1-2.2 2A17.9 17.9 0 0 1 3.6 5.2 2 2 0 0 1 6.6 4Z" />
                 </svg>
               </span>
-              011 35862581
+              +91 8368431399
             </a>
           </div>
         </div>
@@ -712,30 +689,6 @@ function Services() {
                     <h3>{item.question}</h3>
                     <p>{item.answer}</p>
                   </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {!isServicesThree && (
-        <section className="footer-process">
-          <div className="footer-process__inner">
-            <div className="footer-process__intro">
-              <h2>OUR PROCESS</h2>
-              <p>
-                A structured approach to transforming your parking infrastructure into a
-                visionary asset.
-              </p>
-            </div>
-
-            <div className="footer-process__grid">
-              {processSteps.map((step) => (
-                <article className="footer-process__step" key={step.title}>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                  <span aria-hidden="true" />
                 </article>
               ))}
             </div>

@@ -8,8 +8,8 @@ import './Contact.css'
 const contactCards = [
   {
     title: 'Phone',
-    detail: '011 35862581',
-    href: 'tel:01135862581',
+    detail: '+91 8368431399',
+    href: 'tel:+918368431399',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path

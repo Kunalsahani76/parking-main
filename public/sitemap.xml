@@ -59,6 +59,13 @@
     </url>
 
     <url>
+        <loc>https://www.theparkingadvisor.com/blogs</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
         <loc>https://www.theparkingadvisor.com/contact</loc>
         <lastmod>2026-09-16</lastmod>
         <changefreq>yearly</changefreq>

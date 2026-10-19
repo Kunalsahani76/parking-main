@@ -1,9 +1,4 @@
 import logo from '../../assets/icons/main.jpeg'
-import bannerImage from '../../assets/images/banner.jpg'
-import carImage from '../../assets/images/car.jpg'
-import carOneImage from '../../assets/images/car1.jpg'
-import carTwoImage from '../../assets/images/car2.jpg'
-import lobbyImage from '../../assets/images/lobby.jpg'
 import './Footer.css'
 
 const quickLinks = [
@@ -62,8 +57,8 @@ const contactItems = [
     ),
   },
   {
-    text: '011 35862581',
-    href: 'tel:01135862581',
+    text: '+91 8368431399',
+    href: 'tel:+918368431399',
     icon: (
       <svg viewBox="0 0 24 24" role="presentation">
         <path
@@ -127,138 +122,9 @@ const contactItems = [
   },
 ]
 
-const expertiseImages = [
-  {
-    image: bannerImage,
-    alt: 'Urban traffic movement',
-    className: 'is-wide',
-  },
-  {
-    image: carOneImage,
-    alt: 'Interconnected road network',
-    className: 'is-tall',
-  },
-  {
-    image: lobbyImage,
-    alt: 'Smart parking lot monitoring',
-    className: 'is-small',
-  },
-  {
-    image: carImage,
-    alt: 'Operations control room',
-    className: 'is-wide is-shift-up',
-  },
-  {
-    image: carTwoImage,
-    alt: 'Sustainable mobility infrastructure',
-    className: 'is-tall',
-  },
-]
-
-const processSteps = [
-  {
-    title: 'Consultation',
-    description:
-      'We begin by understanding your specific needs, challenges, and long-term goals.',
-  },
-  {
-    title: 'Planning',
-    description:
-      'Detailed schematic designs and volume analyses are created for optimal efficiency.',
-  },
-  {
-    title: 'Implementation',
-    description:
-      'Our experts oversee the integration of technology and physical design layouts.',
-  },
-  {
-    title: 'Optimization',
-    description:
-      'Continuous monitoring and scaling to ensure long-term ROI and mobility.',
-  },
-]
-
 function Footer() {
-  const currentPath = window.location.pathname
-  const hiddenPreFooterPaths = [
-    '/',
-    '/about',
-    '/connect-us',
-    '/success-story',
-    '/contact',
-    '/services-2',
-    '/services-3',
-    '/services-4',
-    '/services-5',
-    '/services-6',
-    '/services/traffic-flow-circulation-planning',
-    '/services/smart-automated-parking',
-    '/services/government-compliance-advisory',
-    '/services/multilevel-basement-parking-design',
-    '/services/parking-revenue',
-  ]
-  const showPreFooterSections = !hiddenPreFooterPaths.includes(currentPath)
-  const showExpertiseSection = currentPath !== '/services'
-  const showFooterProcess =
-    currentPath !== '/services' &&
-    currentPath !== '/services-2' &&
-    currentPath !== '/services/traffic-flow-circulation-planning'
-
   return (
     <>
-      {showPreFooterSections ? (
-        <>
-          {showExpertiseSection ? (
-            <section className="expertise-section">
-              <div className="expertise-section__inner">
-                <div className="expertise-section__heading">
-                  <h2>CORE EXPERTISE</h2>
-                </div>
-                <p>
-                  We leverage cutting-edge technology and urban design principles to
-                  redefine how people park.
-                </p>
-
-                <div className="expertise-section__grid">
-                  {expertiseImages.map((item) => (
-                    <article
-                      className={`expertise-section__card ${item.className}`}
-                      key={item.alt}
-                    >
-                      <img src={item.image} alt={item.alt} />
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </section>
-          ) : null}
-
-          {showFooterProcess ? (
-            <section className="footer-process">
-              <div className="footer-process__inner">
-                <div className="footer-process__intro">
-                  <h2>OUR PROCESS</h2>
-                  <p>
-                    A structured approach to transforming your parking infrastructure into a
-                    visionary asset.
-                  </p>
-                </div>
-
-                <div className="footer-process__grid">
-                  {processSteps.map((step) => (
-                    <article className="footer-process__step" key={step.title}>
-                      <h3>{step.title}</h3>
-                      <p>{step.description}</p>
-                      <span aria-hidden="true" />
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </section>
-          ) : null}
-        </>
-      ) : null}
-
       <footer className="site-footer">
         <div className="site-footer__inner">
           <div className="site-footer__grid">

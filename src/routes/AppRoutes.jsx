@@ -1,5 +1,7 @@
 import MainLayout from '../layout/MainLayout'
 import About from '../pages/About/About'
+import Admin from '../pages/Admin/Admin'
+import Blog from '../pages/Blog/Blog'
 import ConnectUs from '../pages/ConnectUs/ConnectUs'
 import Contact from '../pages/Contact/Contact'
 import Home from '../pages/Home/Home'
@@ -12,9 +14,14 @@ import SuccessStory from '../pages/SuccessStory/SuccessStory'
 
 function AppRoutes() {
   const currentPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const blogPostMatch = currentPath.match(/^\/blogs\/([^/]+)$/)
 
   const page =
-    currentPath === '/about'
+    currentPath === '/admin'
+      ? <Admin />
+      : currentPath === '/blogs' || blogPostMatch
+        ? <Blog slug={blogPostMatch ? decodeURIComponent(blogPostMatch[1]) : undefined} />
+      : currentPath === '/about'
       ? <About />
       : currentPath === '/connect-us'
         ? <ConnectUs />

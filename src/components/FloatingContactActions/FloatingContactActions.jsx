@@ -5,7 +5,7 @@ function FloatingContactActions() {
     <nav className="floating-contact-actions" aria-label="Quick contact links">
       <a
         className="floating-contact-actions__button floating-contact-actions__button--whatsapp"
-        href="https://wa.me/919811207119"
+        href="https://wa.me/918368431399"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
@@ -27,8 +27,8 @@ function FloatingContactActions() {
       </a>
       <a
         className="floating-contact-actions__button floating-contact-actions__button--phone"
-        href="tel:01135862581"
-        aria-label="Call 011 35862581"
+        href="tel:+918368431399"
+        aria-label="Call +91 8368431399"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6.5 3.5h3l1.4 4-2 1.8a15.3 15.3 0 0 0 5.8 5.8l1.8-2 4 1.4v3a1.8 1.8 0 0 1-2 1.8A16.8 16.8 0 0 1 4.7 5.5a1.8 1.8 0 0 1 1.8-2Z" />
